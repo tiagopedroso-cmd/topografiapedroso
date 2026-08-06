@@ -1,0 +1,19 @@
+# Editor / IDE
+.claude/
+.agents/
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Docs internos (não vão pro deploy)
+COPY.txt
+DESIGN SYSTEM.txt
+
+# Node/build
+node_modules/
+dist/
+*.log

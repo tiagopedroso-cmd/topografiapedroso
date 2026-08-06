@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Bloqueia páginas sem conteúdo real (thin content)
+Disallow: /blog.html
+
+Sitemap: https://pedrosotopografia.com.br/sitemap.xml
