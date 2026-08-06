@@ -88,25 +88,21 @@
 
 <main id="main">
 
-  <section class="hero-dark" aria-labelledby="hero-title">
-    <div class="hero-bg" aria-hidden="true">
-      <video autoplay muted loop playsinline preload="auto" poster="Hero.png">
-        <source src="video_hero.mp4" type="video/mp4">
-      </video>
-      <div class="hero-overlay"></div>
-    </div>
-    <div class="container">
-      <h1 id="hero-title" class="reveal">Topografia com Precisão, Técnica e Prazo.</h1>
-      <p class="hero-sub reveal" data-delay="1">Levantamento topográfico, georreferenciamento e regularização de imóveis com responsável técnico CREA. Atendimento local em Arujá e região, direto pelo WhatsApp.</p>
-      <div class="hero-ctas reveal" data-delay="2">
-        <a class="btn btn-wa btn-lg" href="https://wa.me/55" target="_blank" rel="noopener">
-          <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .103 5.334.1 11.892c0 2.096.549 4.14 1.594 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411l.015-.039z"/></svg>
-          Falar no WhatsApp agora
-        </a>
-        <a class="btn btn-on-dark btn-lg" href="servicos.html">
-          Ver serviços <span class="arrow" aria-hidden="true">→</span>
-        </a>
+  <section class="hero-scroll" id="heroScroll" aria-label="Apresentação">
+    <div class="hero-sticky">
+      <div class="hero-bg" aria-hidden="true">
+        <video id="heroVideo" muted loop playsinline preload="auto" poster="Hero.png">
+          <source src="novo_hero.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
       </div>
+      <div class="hero-words" aria-hidden="true">
+        <span class="hero-word" data-idx="0">Precisão.</span>
+        <span class="hero-word" data-idx="1">Confiança.</span>
+        <span class="hero-word" data-idx="2">Tecnologia.</span>
+        <span class="hero-word" data-idx="3">Prazo.</span>
+      </div>
+      <h1 class="sr-only">Topografia com Precisão, Confiança, Tecnologia e Prazo — Pedroso Topografia, Arujá/SP.</h1>
     </div>
   </section>
 
