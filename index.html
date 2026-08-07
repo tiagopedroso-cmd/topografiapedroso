@@ -88,45 +88,52 @@
 
 <main id="main">
 
-  <section class="hero-scroll" id="heroScroll" aria-label="Apresentação">
-    <div class="hero-sticky">
-      <div class="hero-bg" aria-hidden="true">
-        <video id="heroVideo" muted loop playsinline preload="auto" poster="Hero.png">
-          <source src="novo_hero.mp4" type="video/mp4">
-        </video>
-        <div class="hero-overlay"></div>
-      </div>
-      <div class="hero-words" aria-hidden="true">
-        <span class="hero-word" data-idx="0">Precisão.</span>
-        <span class="hero-word" data-idx="1">Confiança.</span>
-        <span class="hero-word" data-idx="2">Tecnologia.</span>
-        <span class="hero-word" data-idx="3">Prazo.</span>
-      </div>
-      <h1 class="sr-only">Topografia com Precisão, Confiança, Tecnologia e Prazo — Pedroso Topografia, Arujá/SP.</h1>
+  <section class="hero-dark" aria-labelledby="hero-title">
+    <div class="hero-bg" aria-hidden="true">
+      <video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="Hero.png">
+        <source src="novo_hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
     </div>
-  </section>
+    <div class="container">
+      <h1 id="hero-title" class="hero-words-stack">
+        <span class="hero-word">Precisão que</span>
+        <span class="hero-word">constrói o <em>futuro.</em></span>
+      </h1>
+      <p class="hero-sub">Levantamentos topográficos de alta precisão para projetos seguros, eficientes e sustentáveis. Tecnologia, experiência e compromisso em cada detalhe.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-wa btn-lg" href="https://wa.me/55" target="_blank" rel="noopener">
+          <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .103 5.334.1 11.892c0 2.096.549 4.14 1.594 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411l.015-.039z"/></svg>
+          Falar no WhatsApp agora
+        </a>
+        <a class="btn btn-on-dark btn-lg" href="servicos.html">
+          Ver serviços <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
 
-  <section class="trust-strip" aria-label="Credenciais">
+  <div class="trust-strip hero-trust" aria-label="Credenciais">
     <div class="marquee">
       <div class="marquee-track">
         <ul class="credentials">
-          <li><span class="idx">01</span> Registro CREA-SP</li>
-          <li><span class="idx">02</span> Equipamentos aferidos</li>
-          <li><span class="idx">03</span> Base em Arujá/SP</li>
-          <li><span class="idx">04</span> Retorno em até 1 hora</li>
-          <li><span class="idx">05</span> Atendimento em Arujá e região</li>
-          <li><span class="idx">06</span> Documentação para prefeitura e cartório</li>
+          <li>Registro CREA-SP</li>
+          <li>Equipamentos aferidos</li>
+          <li>Base em Arujá/SP</li>
+          <li>Retorno em até 1 hora</li>
+          <li>Atendimento em Arujá e região</li>
+          <li>Documentação para prefeitura e cartório</li>
         </ul>
         <ul class="credentials" aria-hidden="true">
-          <li><span class="idx">01</span> Registro CREA-SP</li>
-          <li><span class="idx">02</span> Equipamentos aferidos</li>
-          <li><span class="idx">03</span> Base em Arujá/SP</li>
-          <li><span class="idx">04</span> Retorno em até 1 hora</li>
-          <li><span class="idx">05</span> Atendimento em Arujá e região</li>
-          <li><span class="idx">06</span> Documentação para prefeitura e cartório</li>
+          <li>Registro CREA-SP</li>
+          <li>Equipamentos aferidos</li>
+          <li>Base em Arujá/SP</li>
+          <li>Retorno em até 1 hora</li>
+          <li>Atendimento em Arujá e região</li>
+          <li>Documentação para prefeitura e cartório</li>
         </ul>
       </div>
     </div>
+  </div>
   </section>
 
   <section class="stats" aria-label="Números da empresa">
@@ -148,7 +155,7 @@
     </div>
   </section>
 
-  <section aria-labelledby="serv-title">
+  <section class="services-home" aria-labelledby="serv-title">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow-num" data-num="01">O que fazemos</span>
@@ -211,34 +218,35 @@
     </div>
   </section>
 
-  <section aria-labelledby="how-title" style="background:var(--card)">
+  <section class="why-section" aria-labelledby="why-title">
     <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow-num" data-num="02">Como trabalhamos</span>
-        <h2 id="how-title">Do primeiro contato à entrega técnica</h2>
+      <div class="why-head reveal">
+        <span class="eyebrow-num" data-num="02">Por que escolher</span>
+        <h2 id="why-title">Por que escolher a <em>Pedroso Topografia</em></h2>
+        <p>Precisão técnica, responsabilidade e previsibilidade em cada etapa do seu projeto.</p>
       </div>
-      <ol class="process-grid">
-        <li class="process-step reveal">
-          <div class="step-num" aria-hidden="true">01</div>
-          <h3>Contato</h3>
-          <p>Você manda a demanda pelo WhatsApp e recebe orientação técnica inicial.</p>
-        </li>
-        <li class="process-step reveal" data-delay="1">
-          <div class="step-num" aria-hidden="true">02</div>
-          <h3>Campo</h3>
-          <p>Equipe vai até o local, em Arujá ou região, com equipamentos calibrados.</p>
-        </li>
-        <li class="process-step reveal" data-delay="2">
-          <div class="step-num" aria-hidden="true">03</div>
-          <h3>Processamento</h3>
-          <p>Os dados são tratados e conferidos internamente.</p>
-        </li>
-        <li class="process-step reveal" data-delay="3">
-          <div class="step-num" aria-hidden="true">04</div>
-          <h3>Entrega</h3>
-          <p>Você recebe a documentação pronta, com suporte pós-entrega.</p>
-        </li>
-      </ol>
+      <div class="why-grid">
+        <article class="why-item reveal">
+          <span class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 4.5 6v5.2c0 4.7 3.1 8.2 7.5 9.8 4.4-1.6 7.5-5.1 7.5-9.8V6L12 3Z"/><path d="m8.8 12 2.1 2.1 4.5-4.6"/></svg></span>
+          <h3>Responsabilidade técnica</h3>
+          <p>Acompanhamento direto e serviço conduzido por equipe própria, do campo à entrega final.</p>
+        </article>
+        <article class="why-item reveal" data-delay="1">
+          <span class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5"/><path d="M12 1.5V5M12 19v3.5M1.5 12H5M19 12h3.5"/></svg></span>
+          <h3>Precisão em campo</h3>
+          <p>Equipamentos calibrados e metodologia padronizada para resultados técnicos confiáveis.</p>
+        </article>
+        <article class="why-item reveal" data-delay="2">
+          <span class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+          <h3>Prazo claro desde o início</h3>
+          <p>Escopo e cronograma alinhados antes do serviço, sem surpresas durante o projeto.</p>
+        </article>
+        <article class="why-item reveal" data-delay="3">
+          <span class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="m7.8 12.1 2.7 2.8 5.9-6"/></svg></span>
+          <h3>Conferência antes da entrega</h3>
+          <p>Checagem interna de plantas, memoriais e dados para reduzir retrabalho e atrasos.</p>
+        </article>
+      </div>
     </div>
   </section>
 
@@ -314,6 +322,6 @@
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .103 5.334.1 11.892c0 2.096.549 4.14 1.594 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411l.015-.039z"/></svg>
 </a>
 
-<script src="main.js" defer></script>
+<script src="main.js?v=20260807-2" defer></script>
 </body>
 </html>

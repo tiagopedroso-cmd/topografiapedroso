@@ -20,6 +20,22 @@
     onScroll();
   }
 
+  /* ---------- Floating WhatsApp: reveal after meaningful scroll ---------- */
+  const waFloat = document.querySelector('.wa-float');
+  if (waFloat) {
+    let waTicking = false;
+    const updateWaFloat = () => {
+      if (waTicking) return;
+      waTicking = true;
+      window.requestAnimationFrame(() => {
+        waFloat.classList.toggle('is-visible', window.scrollY > 180);
+        waTicking = false;
+      });
+    };
+    window.addEventListener('scroll', updateWaFloat, { passive: true });
+    updateWaFloat();
+  }
+
   /* ---------- Mobile menu ---------- */
   const toggle = document.getElementById('navToggle');
   const mobileMenu = document.getElementById('mobileMenu');
@@ -89,83 +105,61 @@
     }
   }
 
-  /* ---------- Hero scroll motion (video scrub + words) ---------- */
+  /* ---------- Hero: video plays smoothly, words appear on scroll ---------- */
   const heroScroll = document.getElementById('heroScroll');
   const heroVideo = document.getElementById('heroVideo');
   const heroWords = document.querySelectorAll('.hero-word');
 
-  if (heroScroll && heroVideo && !prefersReducedMotion) {
-    heroVideo.pause();
-    const wordThresholds = [0.05, 0.28, 0.52, 0.76];
-    let vidReady = false;
-    let scheduled = false;
-    let latestProgress = 0;
-    let smoothTarget = 0;
-    let smoothCurrent = 0;
-
-    const updateVideo = () => {
-      // Ease toward target for smoother scrubbing
-      smoothCurrent += (smoothTarget - smoothCurrent) * 0.18;
-      if (vidReady && heroVideo.duration > 0) {
-        const t = heroVideo.duration * smoothCurrent;
-        if (Math.abs(heroVideo.currentTime - t) > 0.03) {
-          try { heroVideo.currentTime = t; } catch(e){}
-        }
-      }
-      if (Math.abs(smoothTarget - smoothCurrent) > 0.001) {
-        requestAnimationFrame(updateVideo);
-      } else {
-        scheduled = false;
-      }
-    };
-
-    const onHeroScroll = () => {
-      const rect = heroScroll.getBoundingClientRect();
-      const total = rect.height - window.innerHeight;
-      const scrolled = -rect.top;
-      const progress = Math.max(0, Math.min(1, scrolled / total));
-      latestProgress = progress;
-      smoothTarget = progress;
-
-      // Words toggle
-      heroWords.forEach((w, i) => {
-        w.classList.toggle('in', progress >= wordThresholds[i]);
-      });
-
-      if (!scheduled) {
-        scheduled = true;
-        requestAnimationFrame(updateVideo);
-      }
-    };
-
-    heroVideo.addEventListener('loadedmetadata', () => {
-      vidReady = true;
-      onHeroScroll();
+  if (heroVideo) {
+    const showVideo = () => heroVideo.classList.add('is-ready');
+    ['loadeddata', 'canplay', 'playing'].forEach(eventName => {
+      heroVideo.addEventListener(eventName, showVideo, { once: true });
     });
-    if (heroVideo.readyState >= 1) { vidReady = true; onHeroScroll(); }
+    if (heroVideo.readyState >= 2) showVideo();
+    heroVideo.play().then(showVideo).catch(()=>{});
+  }
 
+  if (heroScroll && heroWords.length && !prefersReducedMotion) {
+    // Precisão sempre visível (threshold 0); demais aparecem gradual até ~90%
+    const wordThresholds = [0, 0.30, 0.60, 0.90];
+    let ticking = false;
+    const onHeroScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const rect = heroScroll.getBoundingClientRect();
+        const total = Math.max(1, rect.height - window.innerHeight);
+        const scrolled = -rect.top;
+        const progress = Math.max(0, Math.min(1, scrolled / total));
+        heroWords.forEach((w, i) => {
+          w.classList.toggle('in', progress >= wordThresholds[i]);
+        });
+        ticking = false;
+      });
+    };
     window.addEventListener('scroll', onHeroScroll, { passive: true });
     onHeroScroll();
+    // First frame: ensure "Precisão" is already visible
+    heroWords[0]?.classList.add('in');
   } else if (heroWords.length) {
-    // Reduced motion: show all words
     heroWords.forEach(w => w.classList.add('in'));
   }
 
-  /* ---------- Process timeline observer ---------- */
-  const processGrid = document.querySelector('.process-grid');
-  if (processGrid) {
+  /* ---------- Timeline observer ---------- */
+  const timeline = document.getElementById('processTimeline');
+  if (timeline) {
     if (prefersReducedMotion || !('IntersectionObserver' in window)) {
-      processGrid.classList.add('in-view');
+      timeline.classList.add('in-view');
     } else {
       const io = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            processGrid.classList.add('in-view');
-            io.unobserve(processGrid);
+            timeline.classList.add('in-view');
+            io.unobserve(timeline);
           }
         });
-      }, { threshold: 0.25 });
-      io.observe(processGrid);
+      }, { threshold: 0.15, rootMargin: '0px 0px -10% 0px' });
+      io.observe(timeline);
     }
   }
 })();

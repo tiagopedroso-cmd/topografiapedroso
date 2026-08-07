@@ -1,0 +1,540 @@
+# Pedroso Topografia — Estrutura do Site, Textos e SEO Local (Arujá/SP)
+
+> Baseado na análise de RDS Topografia (Guarulhos), Topografia Jundiaí, DSEP Engenharia e Topografia (Osasco), Cassú Topografia (Itaquaquecetuba), MAP Topografia (Sorocaba) e M&B Topografia (Guarulhos).
+>
+> **Objetivo declarado: ranquear em 1º lugar no Google para "topografia em Arujá" e termos relacionados.**
+> Sem formulário de contato — todo CTA leva direto pro WhatsApp.
+> Design system fica pra próxima etapa. Aqui é estrutura + copy + fundação de SEO.
+
+---
+
+## Estratégia de SEO — visão geral
+
+Ranquear #1 em "topografia Arujá" não é só sobre a Home. É sobre ter **densidade temática e geográfica** — o Google precisa entender, sem sombra de dúvida, que a Pedroso Topografia é a autoridade local em topografia em Arujá. Isso vem de 4 frentes:
+
+1. **On-page**: toda página com "Arujá" no title, H1, URL, meta description e no corpo do texto (natural, sem keyword stuffing)
+2. **Estrutura de páginas por serviço + geografia**: páginas próprias para os serviços mais buscados, todas ancoradas em Arujá
+3. **Schema markup**: `LocalBusiness` / `ProfessionalService` com NAP (Nome, Endereço, Telefone) consistente
+4. **Sinais de autoridade local**: Google Business Profile, avaliações, blog com conteúdo local, citações (NAP) consistentes em diretórios
+
+O nome de domínio ideal, se ainda não tiver: algo como `topografiaaruja.com.br` ou `pedrosotopografia.com.br` — se o cliente já tem marca registrada como "Pedroso Topografia", mantém a marca mas **compensa com "Topografia em Arujá" nos titles**, como fez a RDS Topografia em Guarulhos (title = "Topografia em Guarulhos", marca aparece dentro do conteúdo).
+
+**Recomendação de nome do site para SEO:** usar o padrão que a RDS e a Jundiaí usam — título da Home focado em "Topografia em Arujá", não só na marca. Isso pesa mais que manter só "Pedroso Topografia" no title.
+
+---
+
+## Estrutura de páginas (ampliada para SEO)
+
+1. **Home** (`/`) — pilar principal, keyword: "topografia em Arujá"
+2. **Empresa** (`/empresa`) — autoridade (E-E-A-T: Experience, Expertise, Authoritativeness, Trust)
+3. **Serviços** (`/servicos`) — página pilar de serviços
+4. **Páginas individuais de serviço** (`/servicos/[slug]`) — cada serviço principal com sua própria URL, título e meta description otimizados (é o que mais gera ranqueamento de cauda longa — "levantamento topográfico Arujá", "georreferenciamento Arujá", etc.)
+5. **Área de Atuação** (`/area-de-atuacao`) — Arujá + cidades vizinhas (Santa Isabel, Itaquaquecetuba, Guararema, Mogi das Cruzes, Suzano) — cada cidade pode virar sub-seção ou até página própria se o volume de busca justificar
+6. **Blog** (`/blog`) — conteúdo de cauda longa, tira dúvidas, atrai backlinks e sinaliza atividade ao Google
+7. **Contato** (`/contato`) — sem formulário, canais diretos + NAP completo (importante pra SEO local)
+
+Todas as páginas: botão flutuante de WhatsApp fixo + breadcrumbs (Home > Serviços > Levantamento Topográfico) — breadcrumbs ajudam SEO e navegação.
+
+---
+
+## Diretrizes de SEO on-page (aplicar em toda página)
+
+| Elemento | Regra |
+|---|---|
+| **Title tag** | Sempre incluir "Arujá" — formato: `[Serviço] em Arujá \| Pedroso Topografia` |
+| **Meta description** | 150-160 caracteres, incluir "Arujá", CTA implícito, sem clickbait |
+| **H1** | Único por página, incluir a keyword principal + Arujá |
+| **URL (slug)** | Curta, com keyword, sem acento nem stopword desnecessária: `/servicos/levantamento-topografico-aruja` |
+| **Primeiro parágrafo** | Mencionar "Arujá" nas primeiras 100 palavras |
+| **Imagens** | `alt` descritivo com keyword quando fizer sentido (ex: `alt="Equipe da Pedroso Topografia fazendo levantamento topográfico em Arujá"`) — nunca forçado |
+| **Links internos** | Toda página de serviço linka pra Área de Atuação e pra Contato |
+| **Schema** | `LocalBusiness` na Home/Contato, `Service` nas páginas de serviço, `FAQPage` onde houver perguntas frequentes |
+
+---
+
+## 1. HOME (`/`)
+
+### SEO da página
+- **Title:** `Topografia em Arujá | Pedroso Topografia — Levantamento e Georreferenciamento`
+- **Meta description:** `Empresa de topografia em Arujá especializada em levantamento topográfico, georreferenciamento e regularização de imóveis. Atendimento local, equipe própria e orçamento rápido pelo WhatsApp.`
+- **URL:** `/`
+- **Schema:** `LocalBusiness` (ver seção de Schema Markup no fim do documento)
+
+### Header / Menu
+```
+Logo Pedroso Topografia
+
+Home | Empresa | Serviços | Área de Atuação | Blog | Contato
+
+[Botão] Falar no WhatsApp
+```
+
+### Hero
+
+**Tag acima do título:** Pedroso Topografia · Arujá/SP
+
+**H1:**
+Topografia em Arujá com precisão, documentação confiável e prazo que você pode confiar.
+
+**Subtítulo:**
+Levantamento topográfico, georreferenciamento e regularização de imóveis com responsável técnico CREA. Atendimento local em Arujá e região, direto pelo WhatsApp.
+
+**CTA primário:** [Falar no WhatsApp agora]
+**CTA secundário (texto de apoio):** Retorno rápido, sem compromisso.
+
+**Selos de confiança:**
+- Atendimento em Arujá e municípios vizinhos
+- Escopo e prazo alinhados desde o primeiro contato
+- Canal direto por WhatsApp, sem burocracia
+
+### Bloco de credibilidade (números)
+
+- **[XX]+** anos de experiência em Arujá e região
+- **[XXX]+** levantamentos entregues
+- **[XX]%** de aprovação sem retrabalho
+
+### Por que contratar a Pedroso Topografia em Arujá
+
+**Título da seção:** Diferenciais que reduzem risco e aceleram sua aprovação em Arujá
+
+**Intro:** Resultado técnico confiável, entrega organizada e suporte até você conseguir a aprovação que precisa — com quem conhece o solo e a burocracia local de Arujá.
+
+Cards (6):
+
+1. **Responsável técnico e equipe própria**
+   Acompanhamento direto em cada etapa, do campo à entrega final.
+
+2. **Precisão garantida em campo**
+   Equipamentos calibrados e metodologia padronizada em todo levantamento.
+
+3. **Documentação pronta pra aprovação em Arujá**
+   Memoriais, ARTs e plantas organizados conforme as exigências da Prefeitura de Arujá e do Cartório local.
+
+4. **Prazo claro desde o início**
+   Você sabe exatamente quando recebe cada etapa — sem surpresa.
+
+5. **Atendimento ágil e direto**
+   Fala com quem executa o serviço, sem intermediário. Direto no WhatsApp.
+
+6. **Checagem antes da entrega**
+   Conferência interna em todo levantamento, pra evitar retrabalho e atraso.
+
+### Serviços (resumo, com link pra páginas individuais)
+
+**Título:** Serviços de topografia em Arujá para cada etapa do seu terreno ou obra
+
+**Intro:** Da medição inicial à regularização final, a Pedroso Topografia acompanha seu projeto do início ao fim, em Arujá e região.
+
+Cards (cada um linkando pra sua própria página de serviço — ver seção 3.1):
+
+1. **Levantamento Planialtimétrico em Arujá** → `/servicos/levantamento-topografico-aruja`
+   Plantas em UTM, curvas de nível e cadastro completo do terreno.
+
+2. **Georreferenciamento de Imóveis em Arujá** → `/servicos/georreferenciamento-aruja`
+   Certificação junto ao INCRA para regularização de área rural ou urbana.
+
+3. **Locação de Obra e Divisas em Arujá** → `/servicos/locacao-de-obra-aruja`
+   Marcação precisa de limites e eixos antes de começar a construção.
+
+4. **Acompanhamento de Obra em Arujá** → `/servicos/acompanhamento-de-obra-aruja`
+   Controle geométrico da execução, do alicerce à entrega.
+
+5. **Regularização de Imóveis em Arujá** → `/servicos/regularizacao-de-imoveis-aruja`
+   Documentação técnica completa para prefeitura e cartório.
+
+6. **Levantamento com Drone em Arujá** → `/servicos/levantamento-com-drone-aruja`
+   Mapeamento aéreo de grandes áreas com precisão e agilidade.
+
+**CTA:** [Ver todos os serviços em Arujá →] (link pra `/servicos`)
+
+### Como funciona
+
+**Título:** Do primeiro contato à entrega técnica
+
+01. **Contato** — Você manda a demanda pelo WhatsApp e recebe orientação técnica inicial.
+02. **Campo** — Equipe vai até o local, em Arujá ou região, com equipamentos calibrados.
+03. **Processamento** — Os dados são tratados e conferidos internamente.
+04. **Entrega** — Você recebe a documentação pronta, com suporte pós-entrega.
+
+### Área de atuação (resumo — reforça relevância geográfica pro Google)
+
+**Título:** A topografia de referência em Arujá — e também na região
+
+Texto: A Pedroso Topografia é especializada em Arujá, mas leva a mesma precisão técnica para Santa Isabel, Itaquaquecetuba, Guararema, Mogi das Cruzes e Suzano. Consulte disponibilidade pelo WhatsApp.
+
+→ Link pra `/area-de-atuacao`
+
+### Avaliações do Google (crítico para SEO local)
+
+**Título:** Avaliação no Google
+
+Bloco com nota (ex: "4,9 ★ baseado em XX avaliações") + link "Ver avaliações no Google" — isso é sinal forte de relevância local (usado por Jundiaí e DSEP) e também gera prova social. **Assim que o Google Business Profile estiver ativo, esse bloco entra com dados reais.**
+
+### Depoimentos (opcional — só com avaliações reais)
+
+```
+★★★★★
+"[Depoimento curto do cliente]"
+[Nome] — [Profissão/Empresa], Arujá
+```
+
+### CTA final
+
+**Título:** Precisa de topografia em Arujá?
+
+**Texto:** Fale agora com a Pedroso Topografia pelo WhatsApp e receba orientação e prazo sem compromisso.
+
+**Botão:** [Falar no WhatsApp]
+
+**Linha de apoio:** Sem spam, sem formulário chato. Direto com quem faz.
+
+### Footer (NAP consistente — repete em toda página)
+
+```
+Pedroso Topografia
+Topografia em Arujá/SP
+[Endereço completo, se houver escritório físico]
+[Telefone] · [E-mail]
+Segunda a sexta, [horário]
+
+Navegação: Home | Empresa | Serviços | Área de Atuação | Blog | Contato
+
+[Ícones redes sociais, se houver — Instagram e Google Business Profile são prioridade]
+
+© 2026 Pedroso Topografia. Topografia em Arujá e região. Todos os direitos reservados.
+```
+
+> **Importante para SEO:** o NAP (Nome, Endereço, Telefone) precisa ser **idêntico, caractere por caractere**, em todo lugar: site, Google Business Profile, redes sociais, diretórios. Qualquer inconsistência (ex: "Av." vs "Avenida") prejudica o ranqueamento local.
+
+---
+
+## 2. EMPRESA (`/empresa`)
+
+### SEO da página
+- **Title:** `Sobre a Pedroso Topografia | Empresa de Topografia em Arujá/SP`
+- **Meta description:** `Conheça a Pedroso Topografia: [X] anos de experiência em levantamento e regularização de imóveis em Arujá. Responsável técnico CREA e atendimento local.`
+- **URL:** `/empresa`
+
+### Hero da página
+
+**H1:** A empresa de topografia de referência em Arujá
+
+**Subtítulo:** [X] anos medindo terrenos e resolvendo pendências documentais com precisão técnica e responsabilidade, em Arujá e região.
+
+### Nossa história
+
+> A Pedroso Topografia nasceu da experiência de campo de [nome/fundador], que atua há [X] anos com levantamento topográfico e regularização de imóveis em Arujá e região. Ao longo desse tempo, a empresa construiu um histórico de entregas técnicas confiáveis para engenheiros, arquitetos, construtoras e proprietários de Arujá que precisam de segurança jurídica e precisão no terreno.
+>
+> Hoje, a Pedroso Topografia atua com equipamentos calibrados, metodologia padronizada e responsabilidade técnica registrada no CREA, entregando desde levantamentos simples até documentação completa para regularização e usucapião — sempre com o conhecimento local de quem entende a burocracia da Prefeitura e do Cartório de Arujá.
+
+### Missão, valores
+
+**Missão:** Entregar precisão técnica e segurança documental para que cada projeto em Arujá avance sem risco.
+
+**Valores:**
+- Precisão em cada medição
+- Transparência no prazo e no escopo
+- Responsabilidade técnica em toda entrega
+- Atendimento direto, sem burocracia
+
+### Responsável técnico
+
+> Todos os serviços da Pedroso Topografia são executados sob responsabilidade técnica de [nome], CREA [número], garantindo validade legal de plantas, memoriais e ARTs emitidos em Arujá.
+
+*(Citar o número do CREA é sinal forte de confiança/autoridade — Google valoriza isso em nichos "Your Money or Your Life" como serviços técnicos e jurídicos.)*
+
+### CTA da página
+
+**Botão:** [Fale com a nossa equipe no WhatsApp]
+
+---
+
+## 3. SERVIÇOS (`/servicos`)
+
+### SEO da página
+- **Title:** `Serviços de Topografia em Arujá | Pedroso Topografia`
+- **Meta description:** `Levantamento topográfico, georreferenciamento, locação de obra e regularização de imóveis em Arujá/SP. Equipe própria, equipamentos calibrados e orçamento pelo WhatsApp.`
+- **URL:** `/servicos`
+
+### Hero da página
+
+**H1:** Serviços de topografia em Arujá para obra, regularização e documentação
+
+**Subtítulo:** Metodologia padronizada, equipamentos calibrados e entrega organizada — do levantamento em campo à documentação final, em Arujá e região.
+
+### 3.1 — Lista de serviços (cada um com link para página própria)
+
+> **Por que página própria por serviço:** é a alavanca de SEO mais forte pra cauda longa. Quem busca "georreferenciamento Arujá" cai direto numa página 100% sobre isso, não numa seção genérica de "Serviços". Cada página abaixo é pilar de conteúdo próprio.
+
+#### Levantamentos e Mapeamentos
+
+**Levantamento Planialtimétrico em Arujá** → `/servicos/levantamento-topografico-aruja`
+Levantamento completo de terreno com curvas de nível, plantas em UTM e cadastro detalhado — base para qualquer projeto de engenharia ou arquitetura em Arujá.
+[Solicitar orçamento →]
+
+**Levantamento Topográfico Cadastral em Arujá** → `/servicos/levantamento-cadastral-aruja`
+Medição de área e perímetro do imóvel para fins de cadastro, documentação e projeto.
+[Solicitar orçamento →]
+
+**Levantamento com Drone em Arujá (Aerofotogrametria)** → `/servicos/levantamento-com-drone-aruja`
+Mapeamento aéreo de grandes áreas com ortofoto e modelo digital de terreno, com agilidade e precisão milimétrica.
+[Solicitar orçamento →]
+
+**Levantamento para Condomínio e Loteamento em Arujá** → `/servicos/levantamento-condominio-loteamento-aruja`
+Cadastro técnico completo de áreas condominiais e loteamentos, com toda documentação de suporte.
+[Solicitar orçamento →]
+
+#### Obras e Acompanhamento Técnico
+
+**Locação de Obra em Arujá** → `/servicos/locacao-de-obra-aruja`
+Transferência precisa de eixos, alinhamentos e níveis do projeto para o terreno, garantindo fidelidade ao projeto aprovado.
+[Solicitar orçamento →]
+
+**Locação de Divisas em Arujá** → `/servicos/locacao-de-divisas-aruja`
+Marcação em campo dos limites reais do imóvel, evitando invasões e conflitos com vizinhos.
+[Solicitar orçamento →]
+
+**Acompanhamento de Obra em Arujá** → `/servicos/acompanhamento-de-obra-aruja`
+Controle geométrico contínuo da execução, garantindo conformidade com o projeto e as normas técnicas.
+[Solicitar orçamento →]
+
+**Cálculo de Volume e Terraplanagem em Arujá** → `/servicos/terraplanagem-aruja`
+Modelagem de terreno e cálculo de volumes de corte e aterro para projetos de terraplanagem.
+[Solicitar orçamento →]
+
+#### Regularização de Imóveis
+
+**Georreferenciamento de Imóveis em Arujá** → `/servicos/georreferenciamento-aruja`
+Certificação de imóvel rural ou urbano junto ao INCRA, obrigatória para desmembramento, venda ou financiamento.
+[Solicitar orçamento →]
+
+**Desmembramento e Unificação de Áreas em Arujá** → `/servicos/desmembramento-aruja`
+Documentação técnica para dividir ou unir lotes junto à Prefeitura de Arujá e ao Cartório de Registro de Imóveis.
+[Solicitar orçamento →]
+
+**Usucapião — Peças Técnicas em Arujá** → `/servicos/usucapiao-aruja`
+Planta, memorial descritivo e documentação completa para dar entrada em processo de usucapião judicial ou extrajudicial em Arujá.
+[Solicitar orçamento →]
+
+**Retificação de Área em Arujá** → `/servicos/retificacao-de-area-aruja`
+Correção de medidas e confrontações no registro do imóvel junto ao cartório.
+[Solicitar orçamento →]
+
+#### Tecnologia Aplicada (incluir se a empresa tiver esses equipamentos)
+
+**Laser Scanner 3D em Arujá** → `/servicos/laser-scanner-aruja`
+Captura tridimensional de ambientes e edificações com nuvem de pontos de alta precisão, ideal para as built e projetos complexos.
+[Solicitar orçamento →]
+
+**GNSS/RTK em Arujá** → `/servicos/gnss-rtk-aruja`
+Posicionamento por satélite de alta precisão para levantamentos em grandes áreas e regiões de difícil acesso.
+[Solicitar orçamento →]
+
+### 3.2 — Modelo de página individual de serviço
+
+*(Usar essa estrutura para CADA uma das páginas linkadas acima — é o que realmente constrói ranqueamento de cauda longa.)*
+
+**Exemplo aplicado: Levantamento Planialtimétrico em Arujá**
+
+- **Title:** `Levantamento Topográfico em Arujá | Pedroso Topografia`
+- **Meta description:** `Levantamento planialtimétrico em Arujá/SP com plantas em UTM, curvas de nível e cadastro completo. Equipe própria e orçamento rápido pelo WhatsApp.`
+- **URL:** `/servicos/levantamento-topografico-aruja`
+- **H1:** Levantamento Topográfico em Arujá
+
+**Corpo (estrutura sugerida):**
+
+1. **O que é** (1-2 parágrafos explicando o serviço, mencionando "Arujá" naturalmente)
+2. **Quando você precisa desse serviço** (lista de situações — vender terreno, construir, aprovar projeto na prefeitura de Arujá, etc.)
+3. **Como a Pedroso Topografia faz** (processo, equipamentos, prazo médio)
+4. **O que você recebe** (planta assinada, ART, memorial — o que for aplicável)
+5. **CTA:** `[Solicitar levantamento topográfico em Arujá →]` (WhatsApp com mensagem pré-preenchida específica do serviço)
+6. **FAQ da página** (3-5 perguntas, com `FAQPage` schema — ver seção de Schema)
+7. **Link interno** pra Área de Atuação e pra outros 2-3 serviços relacionados
+
+**Exemplo de FAQ (usar em cada página de serviço, adaptando):**
+
+> **Quanto custa um levantamento topográfico em Arujá?**
+> O valor varia conforme o tamanho e a complexidade do terreno. Envie a localização e a metragem pelo WhatsApp e receba uma estimativa.
+
+> **Quanto tempo leva um levantamento topográfico?**
+> Depende da área e do tipo de levantamento, mas o prazo é sempre alinhado com você antes de começar.
+
+> **Preciso de levantamento topográfico para aprovar projeto na Prefeitura de Arujá?**
+> Sim, na maioria dos casos a prefeitura exige planta topográfica atualizada para aprovação de projetos e regularizações.
+
+*(Repetir a lógica pra cada serviço, adaptando as perguntas ao contexto — georreferenciamento, usucapião, etc. têm dúvidas diferentes.)*
+
+### CTA final da página de Serviços
+
+**Título:** Não achou o serviço que precisa?
+
+**Texto:** Fala com a gente pelo WhatsApp e explica sua necessidade — a gente te orienta sobre o melhor caminho técnico.
+
+**Botão:** [Falar no WhatsApp]
+
+---
+
+## 4. ÁREA DE ATUAÇÃO (`/area-de-atuacao`)
+
+*(Página estratégica pra SEO local — reforça pro Google que Arujá é o centro de atuação, mas capturamos também busca da região.)*
+
+### SEO da página
+- **Title:** `Topografia em Arujá e Região | Área de Atendimento — Pedroso Topografia`
+- **Meta description:** `Atendemos Arujá, Santa Isabel, Itaquaquecetuba, Guararema, Mogi das Cruzes e Suzano. Topografia com equipe própria e atendimento local rápido.`
+- **URL:** `/area-de-atuacao`
+
+### Hero
+
+**H1:** Topografia em Arujá e região
+
+**Subtítulo:** Nossa base é em Arujá, mas atendemos com a mesma equipe, metodologia e prazo em toda a região.
+
+### Bloco principal: Arujá
+
+**Título:** Topografia em Arujá — nossa cidade base
+
+Texto: A Pedroso Topografia é especializada no atendimento em Arujá, conhecendo a fundo os processos da Prefeitura Municipal e do Cartório de Registro de Imóveis local. Isso significa entrega mais rápida e menos retrabalho pra você. → link pra `/servicos`
+
+### Cidades atendidas na região
+
+Grid com nomes das cidades (ajustar com o cliente conforme raio real de atendimento):
+
+```
+Arujá (base)      Santa Isabel      Itaquaquecetuba
+Guararema          Mogi das Cruzes   Suzano
+```
+
+*(Se o volume de busca justificar, cada cidade grande — ex: Mogi das Cruzes — pode virar página própria no padrão `/topografia-mogi-das-cruzes`, replicando a estrutura da Home mas focada naquela cidade. Fazer isso só depois de validar que Arujá já está bem posicionado — não adianta pulverizar esforço antes de consolidar o principal.)*
+
+### Texto de apoio
+
+> Não encontrou sua cidade na lista? Fala com a gente pelo WhatsApp — atendemos sob consulta em toda a região.
+
+**CTA:** [Consultar disponibilidade no WhatsApp]
+
+---
+
+## 5. BLOG (`/blog`)
+
+*(Página nova em relação à primeira versão — essencial pra SEO. Nenhum concorrente pequeno de Arujá provavelmente tem isso, é onde dá pra abrir vantagem. A MAP Topografia usa blog pra capturar buscas informacionais tipo "o que é usucapião", "quanto custa levantamento topográfico" — isso traz tráfego que não converteria via página de serviço direto, mas constrói autoridade e pode converter depois.)*
+
+### SEO da página
+- **Title:** `Blog | Dicas sobre Topografia e Regularização de Imóveis em Arujá`
+- **Meta description:** `Conteúdo sobre topografia, georreferenciamento e regularização de imóveis em Arujá/SP. Tire suas dúvidas com a Pedroso Topografia.`
+- **URL:** `/blog`
+
+### Sugestão de pauta inicial (5 primeiros artigos)
+
+*(Cada um vira uma página própria, sempre fechando com CTA de WhatsApp e mencionando Arujá)*
+
+1. **"Quanto custa um levantamento topográfico em Arujá?"** — captura busca de preço, converte bem
+2. **"Como funciona a regularização de imóvel em Arujá: passo a passo"**
+3. **"Usucapião extrajudicial em Arujá: o que você precisa saber"**
+4. **"Georreferenciamento: quando é obrigatório e como funciona em Arujá"**
+5. **"Comprei um terreno em Arujá — e agora? O que fazer antes de construir"**
+
+*(Não escrever esses artigos agora — isso é indicação de pauta pra fase de conteúdo, depois do site no ar.)*
+
+---
+
+## 6. CONTATO (`/contato`)
+
+*(Sem formulário — só canais diretos. Mas com foco redobrado em NAP pra SEO local.)*
+
+### SEO da página
+- **Title:** `Contato | Pedroso Topografia — Topografia em Arujá/SP`
+- **Meta description:** `Fale com a Pedroso Topografia pelo WhatsApp. Atendimento em Arujá/SP, [horário]. Orçamento rápido e sem compromisso.`
+- **URL:** `/contato`
+- **Schema:** `LocalBusiness` com NAP completo (ver Schema Markup)
+
+### Hero
+
+**H1:** Fale com a Pedroso Topografia em Arujá
+
+**Subtítulo:** Escolha o canal que preferir e receba orientação técnica e prazo sem compromisso.
+
+### Bloco de canais
+
+```
+📱 WhatsApp
+[Falar no WhatsApp] → link direto wa.me com mensagem pré-preenchida:
+"Olá! Vim pelo site da Pedroso Topografia e gostaria de mais informações sobre os serviços em Arujá."
+
+📞 Telefone
+[(11) XXXX-XXXX]
+
+✉️ E-mail
+[contato@pedrosotopografia.com.br]
+
+📍 Endereço
+[Endereço completo em Arujá, se houver escritório físico com atendimento presencial]
+
+🕒 Horário de atendimento
+Segunda a sexta, [XX:XX] às [XX:XX]
+```
+
+**Mapa incorporado (Google Maps embed):** adicionar iframe do Google Maps apontando pro endereço em Arujá — sinal geográfico direto pro Google e facilita quem quer ir até o escritório.
+
+### Reforço de confiança
+
+- Escopo técnico validado conforme a necessidade real do seu projeto
+- Prazo de execução alinhado com o cronograma da obra
+- Orientação direta, sem letra miúda
+
+### CTA grande no fim da página
+
+**Botão grande:** [Falar agora no WhatsApp]
+
+---
+
+## Schema Markup (essencial pro objetivo de #1 em Arujá)
+
+Adicionar na Home e na página de Contato (mínimo), formato JSON-LD:
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Pedroso Topografia",
+  "image": "[URL do logo/foto]",
+  "telephone": "[telefone com DDD]",
+  "email": "[e-mail]",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "[endereço]",
+    "addressLocality": "Arujá",
+    "addressRegion": "SP",
+    "postalCode": "[CEP]",
+    "addressCountry": "BR"
+  },
+  "areaServed": ["Arujá", "Santa Isabel", "Itaquaquecetuba", "Guararema", "Mogi das Cruzes", "Suzano"],
+  "url": "[URL do site]",
+  "priceRange": "$$"
+}
+```
+
+Nas páginas de serviço individuais, adicionar também `Service` schema, e nas páginas com FAQ, `FAQPage` schema. Isso ajuda o Google a exibir rich snippets (estrelas, perguntas expansíveis nos resultados de busca), o que aumenta CTR mesmo sem estar em 1º lugar ainda.
+
+---
+
+## Checklist de SEO fora do site (não é conteúdo do site, mas é obrigatório pro objetivo de #1 em Arujá)
+
+*(Anotar aqui porque faz parte do mesmo objetivo, mesmo que não seja "texto de página")*
+
+- [ ] **Google Business Profile** completo e verificado, categoria principal "Topógrafo" ou "Empresa de topografia", endereço em Arujá, horário, fotos, posts periódicos
+- [ ] **NAP consistente** em todos os diretórios (mesmo formato de nome, endereço e telefone em todo lugar)
+- [ ] Cadastro em diretórios locais e de nicho: Google Business Profile, Facebook, Apontador, listas de empresas de engenharia/topografia, sindicatos e associações locais
+- [ ] Solicitar avaliações reais de clientes no Google (impacto direto no pacote local — o "map pack")
+- [ ] Backlinks locais: parcerias com imobiliárias, construtoras, escritórios de arquitetura de Arujá que possam linkar pro site
+- [ ] Velocidade de carregamento e mobile-first (Google prioriza isso no ranqueamento, principal em buscas locais feitas no celular)
+
+---
+
+## Observações técnicas para a próxima etapa (design system)
+
+- Todo botão de CTA no site aponta pro link `wa.me/55XXXXXXXXXXX` com mensagem pré-preenchida (mudando o texto conforme a seção/serviço, como fez a DSEP em cada card de serviço).
+- Botão de WhatsApp flutuante fixo em todas as páginas.
+- Breadcrumbs em todas as páginas internas (Home > Serviços > Levantamento Topográfico em Arujá) — ajuda SEO e UX.
+- Página de Serviços é a mais extensa — pensar em categorias colapsáveis (accordion) se a lista crescer muito, pro mobile não ficar gigante.
+- Cada página de serviço individual deve ter H1 único, meta title/description únicos — nunca duplicar entre páginas (conteúdo duplicado prejudica SEO).
+- Todos os textos entre colchetes `[ ]` precisam ser preenchidos com dado real do cliente antes de ir pro ar (nome do responsável técnico, CREA, telefone, endereço, anos de experiência, etc.) — e esse dado precisa bater exatamente com o Google Business Profile.

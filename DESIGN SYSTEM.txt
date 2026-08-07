@@ -1,0 +1,184 @@
+# Pedroso Topografia — Design System (Base)
+
+> Site institucional real já encontrado em produção: **pedrosotopografia.com.br** — atualmente um WordPress placeholder, sem identidade visual desenvolvida, com logo azul no cabeçalho e endereço confirmado em **Av. dos Expedicionários, 730, Sala 01 — Arujá/SP**. Isso confirma o objetivo de SEO local do documento anterior.
+>
+> **Cor extraída do logo real (arquivo enviado):** azul institucional `#074480`, com uma variação levemente mais escura `#06396B` no degradê inferior do fundo, e branco quase puro `#FDFDFD` no símbolo e na tipografia. A paleta abaixo já reflete esse valor exato — não é mais estimativa.
+>
+> Referência de estética analisada: case Bobrikov Brothers (curso de PDR automotivo, Tilda) — tema escuro premium, tipografia bold condensada, azul técnico como cor de destaque, cards com bordas arredondadas suaves, fotografia de produto com iluminação dramática. Adaptei essa linguagem pra um segmento de engenharia/topografia: troca peças de carro por terreno, drone, estação total, mantém a sensação de "tecnologia + precisão + confiança" — com uma diferença importante: como a Pedroso já tem um azul-marinho institucional consolidado (o do logo), o fundo escuro do site usa esse mesmo azul aprofundado como base, em vez de um preto genérico. Isso mantém a marca reconhecível em vez de mascarar o azul real por trás de uma estética emprestada.
+
+---
+
+## 1. Cores
+
+### Paleta principal
+
+| Uso | Cor | Hex | Observação |
+|---|---|---|---|
+| **Primária (marca)** | Azul institucional | `#074480` | Extraído diretamente do logo enviado |
+| **Primária — variação escura** | Azul-marinho profundo | `#06396B` | Degradê inferior do próprio logo — usar em fundos de seção alternada, footer |
+| **Primária escura (fundo geral do site)** | Preto azulado | `#050B14` | Versão bem escurecida do azul da marca (não é preto puro) — mantém a identidade mesmo no fundo, em vez de recorrer a um preto genérico |
+| **Primária clara** | Branco | `#FDFDFD` | Extraído do texto do logo — praticamente branco puro, contraste máximo |
+
+### Paleta secundária (apoio institucional)
+
+| Uso | Cor | Hex |
+|---|---|---|
+| Cinza-grafite (textos secundários, fundo de card) | `#1B212C` |
+| Cinza-claro (bordas, divisores sutis) | `#2A313D` |
+| Cinza-texto (parágrafos sobre fundo escuro) | `#B8C0CC` |
+
+### Cor de suporte — Ação (WhatsApp)
+
+> **Esse é o ponto mais importante da paleta pro objetivo de conversão.**
+
+| Uso | Cor | Hex |
+|---|---|---|
+| **CTA WhatsApp (botão principal do site)** | Verde WhatsApp oficial | `#25D366` |
+| Hover do CTA | Verde escurecido | `#1EBE5B` |
+
+**Por que usar o verde oficial do WhatsApp e não o azul da marca no botão principal:**
+Reconhecimento instantâneo é o que mais aumenta clique. O verde do WhatsApp já carrega associação mental imediata ("é aqui que eu mando mensagem") pra praticamente todo usuário brasileiro. Usar a cor da marca (azul) no botão de CTA faria ele se misturar com o resto da interface — o botão precisa ser a única coisa verde na tela, pra saltar aos olhos sempre. Esse é o mesmo racional por trás do botão flutuante verde que aparece em quase todos os sites de topografia analisados no documento anterior.
+
+### Cor de alerta/destaque pontual (opcional)
+
+| Uso | Cor | Hex |
+|---|---|---|
+| Selo/badge de credibilidade (ex: "4,9 ★ Google") | Âmbar | `#F5A623` |
+
+---
+
+## 2. Tipografia
+
+### Fontes sugeridas
+
+- **Títulos (H1-H3):** `Sora` ou `SF Pro Display` — bold/condensada, mesma linguagem "peso técnico" do case de referência (que usa SF Pro/Inter)
+- **Corpo de texto e UI (H4 em diante, parágrafos, botões):** `Inter` — altíssima legibilidade em telas, padrão de mercado pra interfaces técnicas
+
+Se quiser manter uma única família por simplicidade de carregamento: `Inter` cobre tudo (títulos em peso 700/800, corpo em 400/500) sem perder o efeito bold do case de referência.
+
+### Hierarquia
+
+| Elemento | Tamanho (desktop) | Tamanho (mobile) | Peso | Uso |
+|---|---|---|---|---|
+| H1 | 56px | 32px | 800 (Extrabold) | Título único por página, sempre com a keyword de SEO (ex: "Topografia em Arujá") |
+| H2 | 40px | 28px | 700 (Bold) | Títulos de seção ("Diferenciais", "Serviços", "Como funciona") |
+| H3 | 28px | 22px | 700 (Bold) | Títulos de card, subtítulos de serviço |
+| H4 | 20px | 18px | 600 (Semibold) | Labels de destaque, número de estatística |
+| Corpo (body) | 16-18px | 16px | 400 (Regular) | Parágrafos |
+| Corpo pequeno / legenda | 14px | 13px | 400-500 | Rodapé, metadados, disclaimers |
+| Botão / CTA | 16-18px | 16px | 600 (Semibold) | Sempre maiúsculo ou title case — nunca menor que o corpo |
+
+**Line-height:** 1.2 pra títulos, 1.5-1.6 pra corpo — texto técnico (memoriais, descrições de serviço) precisa de respiro pra não cansar.
+
+**Letter-spacing:** títulos grandes (H1/H2) com leve tracking negativo (-1% a -2%) pra dar o efeito "apertado e forte" do case de referência; botões com tracking levemente positivo (+2-3%) pra reforçar leitura de call-to-action.
+
+---
+
+## 3. Componentes
+
+### Botões
+
+**Botão primário — CTA WhatsApp** *(o mais importante do sistema)*
+- Fundo: `#25D366` sólido
+- Texto: branco `#FFFFFF`, peso 600
+- Ícone de WhatsApp sempre à esquerda do texto
+- Border-radius: `12px` (nunca totalmente quadrado — passa confiança, mas também nunca pill/100% arredondado — foge do tom técnico/engenharia)
+- Padding: `16px 28px` (área de toque grande — pensando em mobile, onde a maior parte do tráfego local vai clicar)
+- Sombra leve verde no hover (`box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35)`) pra dar sensação de "profundidade clicável"
+- Estado hover: escurece 10%, leve `scale(1.02)`
+
+**Botão secundário — navegação/institucional**
+- Fundo transparente, borda `1px solid #2A313D`
+- Texto branco ou azul primário
+- Mesmo border-radius do primário (12px), pra manter consistência
+- Usado pra ações não-conversivas: "Ver todos os serviços", "Saiba mais"
+
+**Botão flutuante WhatsApp (fixo)**
+- Círculo ou pill verde `#25D366`, ícone branco
+- Fixo no canto inferior direito, todas as páginas
+- Leve animação de pulso (`pulse` sutil, 2-3s de intervalo) pra chamar atenção sem incomodar — usado por praticamente todos os concorrentes analisados
+
+### Cards (serviços, diferenciais, depoimentos)
+
+- Fundo: `#1B212C` (cinza-grafite) sobre o fundo preto-azulado da página — cria profundidade em camadas, como no case de referência
+- Border-radius: `16px` — mais arredondado que os botões, pra diferenciar hierarquia (blocos de conteúdo vs. ações)
+- Borda sutil: `1px solid #2A313D` — dá "aceso" mas sem chapar
+- Padding interno: `24-32px`
+- Ícone ou imagem no topo do card, título em H3/H4, texto de apoio em corpo pequeno
+- Hover (desktop): leve elevação (`translateY(-4px)`) + sombra mais forte + borda ganha um tom de azul primário — sinaliza interatividade mesmo em cards que não são clicáveis
+
+### Inputs
+
+> Como definido, **não há formulário de contato** — mas pode haver 1-2 inputs pontuais (campo de busca do blog, campo de e-mail pra newsletter, se decidirem incluir). Regra pra esses casos raros:
+- Fundo: `#050B14` (mais escuro que o card, "afunda" visualmente)
+- Borda: `1px solid #2A313D`, vira `#074480` (azul primário da marca) no foco
+- Border-radius: `10px`
+- Nunca usar input pra captar lead de orçamento — isso sempre vai pro WhatsApp
+
+### Navegação (header)
+
+- Fundo transparente sobre o hero, vira sólido (`#050B14` com leve blur) ao rolar a página — efeito "sticky com glass" comum em sites premium
+- Logo à esquerda, menu ao centro/direita, botão de WhatsApp sempre visível à direita — nunca escondido atrás de "menu hamburguer" no mobile
+
+---
+
+## 4. Estética geral
+
+### Border-radius (escala consistente)
+
+| Elemento | Radius |
+|---|---|
+| Botões | `12px` |
+| Cards | `16px` |
+| Inputs | `10px` |
+| Imagens grandes / hero | `20-24px` |
+| Badges/selos pequenos | `999px` (pill total) |
+| Botão flutuante WhatsApp | `999px` (círculo) |
+
+Regra geral: **quanto maior o elemento, mais arredondado** — cria uma progressão visual consistente, evita a sensação "quadrado técnico demais" sem perder a seriedade de empresa de engenharia.
+
+### Sombras
+
+| Contexto | Sombra |
+|---|---|
+| Card em repouso | `0 4px 16px rgba(0,0,0,0.24)` |
+| Card em hover | `0 12px 32px rgba(0,0,0,0.4)` |
+| Botão CTA (WhatsApp) | `0 8px 24px rgba(37,211,102,0.35)` — sombra colorida, reforça a cor do botão mesmo à distância |
+| Header sticky (ao rolar) | `0 2px 12px rgba(0,0,0,0.3)` |
+
+Sombras sempre suaves e difusas (nunca "hard shadow") — mantém o tom premium/tech do case de referência.
+
+### Espaçamento (grid de 8px)
+
+Usar múltiplos de 8 em todo o sistema — reduz decisão arbitrária e mantém ritmo visual:
+
+| Token | Valor | Uso típico |
+|---|---|---|
+| `space-1` | 8px | Gap entre ícone e texto |
+| `space-2` | 16px | Padding interno pequeno |
+| `space-3` | 24px | Padding de card |
+| `space-4` | 32px | Gap entre elementos dentro de uma seção |
+| `space-5` | 64px | Espaço entre seções (mobile) |
+| `space-6` | 96-120px | Espaço entre seções (desktop) |
+
+Seções bem espaçadas (não espremidas) reforçam a sensação de empresa séria/premium — o oposto do efeito "site poluído" que aparece nos concorrentes menores analisados (ex: Cassú Topografia).
+
+---
+
+## 5. Diretrizes de usabilidade — foco no clique do WhatsApp
+
+Esse é o objetivo funcional do design system inteiro. Regras específicas:
+
+1. **Contraste isolado do verde:** nenhum outro elemento do site pode ser verde. O olho precisa associar "verde = ação" instantaneamente, sem concorrência visual.
+2. **CTA acima da dobra:** botão de WhatsApp visível sem rolar a página, sempre — tanto no hero da Home quanto no topo de cada página de serviço.
+3. **Repetição estratégica:** CTA aparece no mínimo 3x por página (hero, meio de conteúdo, fim de página) + botão flutuante fixo — sem exagerar a ponto de parecer spam.
+4. **Mensagem pré-preenchida específica por contexto:** cada botão leva a uma mensagem de WhatsApp diferente conforme a seção/serviço (já detalhado no documento de textos) — reduz fricção porque o usuário não precisa escrever nada.
+5. **Área de toque generosa no mobile:** botão com no mínimo 48x48px de área clicável — a maior parte do tráfego de busca local ("topografia Arujá") vem de celular.
+6. **Botão flutuante nunca cobre conteúdo importante:** posicionado no canto inferior direito com margem de segurança, respeitando o footer.
+7. **Microcopy de baixo risco perto do CTA:** frases como "sem compromisso", "retorno rápido" reduzem a hesitação de clicar — já usadas no documento de textos anterior, reforçar visualmente com peso tipográfico menor logo abaixo do botão.
+
+---
+
+## Status
+
+Paleta fechada com o Hex real extraído do logo (`#074480` / `#06396B` / `#FDFDFD`). Design System pronto pra seguir pra prototipação.
