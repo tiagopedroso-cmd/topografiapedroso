@@ -625,17 +625,20 @@ section{padding:var(--s4) 0}
   will-change:transform;overflow:hidden;
 }
 .card::after{
-  content:"";position:absolute;z-index:0;right:-22px;bottom:-30px;
-  width:145px;height:210px;pointer-events:none;
-  background:url("assets/equipamento-topografia.png") center bottom/contain no-repeat;
-  opacity:.065;filter:saturate(.7) contrast(.9);
-  transform:translate3d(10px,12px,0) rotate(-2deg);
+  content:"";position:absolute;z-index:0;right:-8px;bottom:-18px;
+  width:150px;height:190px;pointer-events:none;
+  background:url("equipamento-topografia.png") right bottom/contain no-repeat;
+  opacity:.11;filter:saturate(.72) contrast(.92);
+  transform:translate3d(8px,10px,0) rotate(-1.5deg);
   transition:opacity 320ms var(--ease-out),transform 420ms var(--ease-out),filter 320ms var(--ease-out);
 }
 .card > *{position:relative;z-index:1}
 .card:hover::after{
-  opacity:.16;filter:saturate(.9) contrast(1);
+  opacity:.22;filter:saturate(.9) contrast(1);
   transform:translate3d(0,0,0) rotate(0);
+}
+@media (max-width:639px){
+  .card::after{right:-12px;bottom:-20px;width:138px;height:176px;opacity:.09}
 }
 @media (min-width:1024px){.card{padding:var(--s3);gap:10px}}
 .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--brand)}
@@ -1018,7 +1021,7 @@ section{padding:var(--s4) 0}
 }
 .site-footer::before{
   content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
-  background-image:url("assets/fundo-rodape-topografia.png");
+  background-image:url("fundo-rodape-topografia.png");
   background-size:100% 100%;background-position:center;background-repeat:no-repeat;
   opacity:.48;filter:none;
 }
@@ -1263,4 +1266,38 @@ body.menu-open .nav-toggle svg line:nth-child(3){transform:rotate(-45deg) transl
 @media (max-width:767px) and (orientation:landscape) and (max-height:500px){
   .hero-dark{min-height:auto;padding:var(--s3) 0}
   .hero-words-stack .hero-word{font-size:22px}
+}
+
+/* ============================================================
+   Home mobile-only overrides (Home page only)
+   ============================================================ */
+
+@media (max-width:767px){
+  /* Utility to hide elements only on mobile without touching desktop */
+  .hide-mobile{display:none !important}
+
+  /* Vídeo hero centralizado no mobile — foca melhor no drone/topo do quadro */
+  .hero-dark .hero-bg video,
+  .hero-dark .hero-bg img{
+    object-position:50% 32%;
+  }
+
+  /* Region-block: sem o botão, fica com menos ar embaixo */
+  .region-block{padding:var(--s4) var(--s3)}
+  .region-block h2{font-size:22px;margin-bottom:12px}
+  .region-block p{font-size:15px;margin-bottom:0}
+
+  /* CTA final mais compacto — a barra sticky já resolve o WhatsApp */
+  .cta-dark{padding:var(--s4) 0}
+  .cta-dark h2{font-size:22px}
+  .cta-dark > .container > p{font-size:15px;margin-bottom:var(--s3)}
+
+  /* "Sem spam..." fica supérfluo com a sticky bar */
+  .cta-dark .hero-note{display:none}
+
+  /* Container respira mais nas laterais em telas muito pequenas */
+  .hero-dark .hero-ctas{gap:10px}
+
+  /* Menos padding no site-footer superior; a sticky bar já reserva espaço */
+  .site-footer{padding:var(--s5) 0 calc(var(--s3) + 88px)}
 }
