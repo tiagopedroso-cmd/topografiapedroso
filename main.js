@@ -162,4 +162,31 @@
       io.observe(timeline);
     }
   }
+
+  /* ---------- Home 3: scroll motion em três planos ---------- */
+  const home3Depth = document.getElementById('home3Depth');
+  if (home3Depth && !prefersReducedMotion) {
+    let home3Frame = 0;
+    const updateHome3Depth = () => {
+      home3Frame = 0;
+      if (window.innerWidth <= 767) {
+        home3Depth.style.setProperty('--home3-scene-y', '0px');
+        home3Depth.style.setProperty('--home3-equipment-y', '0px');
+        home3Depth.style.setProperty('--home3-copy-y', '0px');
+        return;
+      }
+      const rect = home3Depth.getBoundingClientRect();
+      const progress = Math.max(0, Math.min(1, -rect.top / Math.max(rect.height, 1)));
+      home3Depth.style.setProperty('--home3-scene-y', `${(progress * rect.height * 0.08).toFixed(2)}px`);
+      home3Depth.style.setProperty('--home3-equipment-y', `${(progress * rect.height * 0.24).toFixed(2)}px`);
+      home3Depth.style.setProperty('--home3-copy-y', `${(progress * rect.height * -0.055).toFixed(2)}px`);
+    };
+    const queueHome3Depth = () => {
+      if (!home3Frame) home3Frame = requestAnimationFrame(updateHome3Depth);
+    };
+    window.addEventListener('scroll', queueHome3Depth, { passive:true });
+    window.addEventListener('resize', queueHome3Depth, { passive:true });
+    queueHome3Depth();
+  }
+
 })();
