@@ -1365,6 +1365,23 @@ body.menu-open .nav-toggle svg line:nth-child(3){transform:rotate(-45deg) transl
 .home-2 .home2-hero .hero-word{font-size:clamp(38px,4.2vw,62px);line-height:1.01}
 .home-2 .home2-hero .hero-sub{max-width:510px;font-size:clamp(15px,1.15vw,17px);line-height:1.65;color:rgba(255,255,255,.76)}
 
+/* Homes 1 e 3 — mesma referência vertical da Hero da Home 2 */
+@media (min-width:768px){
+  .home-1 .hero-dark > .container,
+  .home-3 .home3-depth > .container{
+    display:flex;flex-direction:column;justify-content:center;align-items:flex-start;
+    gap:clamp(18px,2.7vh,30px);min-height:clamp(430px,64vh,650px);
+  }
+  .home-1 .hero-dark .hero-words-stack,
+  .home-1 .hero-dark .hero-sub,
+  .home-1 .hero-dark .hero-ctas,
+  .home-3 .home3-depth .hero-words-stack,
+  .home-3 .home3-depth .hero-sub,
+  .home-3 .home3-depth .hero-ctas{margin:0}
+  .home-1 .hero-dark .hero-ctas,
+  .home-3 .home3-depth .hero-ctas{margin-top:clamp(10px,2vh,22px)}
+}
+
 .home-2 .services-home .card{
   min-height:205px;
   padding:20px 22px 18px;
