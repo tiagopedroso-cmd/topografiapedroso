@@ -177,9 +177,12 @@
       }
       const rect = home3Depth.getBoundingClientRect();
       const progress = Math.max(0, Math.min(1, -rect.top / Math.max(rect.height, 1)));
-      home3Depth.style.setProperty('--home3-scene-y', `${(progress * rect.height * 0.08).toFixed(2)}px`);
-      home3Depth.style.setProperty('--home3-equipment-y', `${(progress * rect.height * 0.24).toFixed(2)}px`);
-      home3Depth.style.setProperty('--home3-copy-y', `${(progress * rect.height * -0.055).toFixed(2)}px`);
+      const sceneDepth = 0.13;
+      const equipmentDepth = 0.4;
+      const copyDepth = -0.1;
+      home3Depth.style.setProperty('--home3-scene-y', `${(progress * rect.height * sceneDepth).toFixed(2)}px`);
+      home3Depth.style.setProperty('--home3-equipment-y', `${(progress * rect.height * equipmentDepth).toFixed(2)}px`);
+      home3Depth.style.setProperty('--home3-copy-y', `${(progress * rect.height * copyDepth).toFixed(2)}px`);
     };
     const queueHome3Depth = () => {
       if (!home3Frame) home3Frame = requestAnimationFrame(updateHome3Depth);

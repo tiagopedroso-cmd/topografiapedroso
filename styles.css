@@ -1711,3 +1711,68 @@ h1,h2,h3,p,a,li{overflow-wrap:break-word}
   .home-3 .home3-depth{min-height:620px}
   .home-3 .home3-depth .home3-equipment-solid{right:-9%;width:65vw}
 }
+
+/* ============================================================
+   Home 3 — catálogo técnico editorial
+   ============================================================ */
+
+.home-3 .services-home{
+  background:#f7f9fb;border-block:1px solid #dfe6ed;
+}
+.home-3 .services-ledger{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;
+  border-top:1px solid #aebdca;counter-reset:service-ledger;
+}
+.home-3 .services-ledger .card{
+  counter-increment:service-ledger;display:grid;
+  grid-template-columns:52px minmax(0,1fr) auto;
+  grid-template-rows:auto auto;column-gap:18px;row-gap:8px;
+  min-height:154px;padding:25px 26px;margin:0;border:0;border-radius:0;
+  border-bottom:1px solid #cbd5df;background:transparent;box-shadow:none;
+  transition:background-color 260ms ease,color 260ms ease;
+}
+.home-3 .services-ledger .card:nth-child(odd){border-right:1px solid #cbd5df}
+.home-3 .services-ledger .card::before{
+  content:counter(service-ledger,decimal-leading-zero);position:static;
+  grid-column:1;grid-row:1 / 3;align-self:start;
+  color:#074480;font:700 12px/1.2 var(--font-display);letter-spacing:.14em;
+}
+.home-3 .services-ledger .card::after{display:none}
+.home-3 .services-ledger .card-icon{
+  grid-column:3;grid-row:1 / 3;align-self:center;
+  width:42px;height:42px;margin:0;border:0;border-radius:50%;
+  background:transparent;color:#668099;opacity:.78;
+}
+.home-3 .services-ledger .card h3{
+  grid-column:2;grid-row:1;max-width:none;margin:0;
+  color:#0a1625;font-size:clamp(17px,1.35vw,20px);letter-spacing:-.025em;
+}
+.home-3 .services-ledger .card p{
+  grid-column:2;grid-row:2;max-width:48ch;margin:0;padding-right:12px;
+  color:#647386;font-size:13px;line-height:1.55;
+}
+.home-3 .services-ledger .card-link{
+  grid-column:2;grid-row:3;align-self:end;width:max-content;padding-top:8px;
+  color:#074480;font-size:12px;text-transform:uppercase;letter-spacing:.1em;
+}
+.home-3 .services-ledger .card:hover{
+  transform:none;background:#0a315b;color:#fff;
+}
+.home-3 .services-ledger .card:hover h3,
+.home-3 .services-ledger .card:hover .card-link{color:#fff}
+.home-3 .services-ledger .card:hover p{color:#bdcbd8}
+.home-3 .services-ledger .card:hover .card-icon{color:#fff;opacity:1;transform:translateX(-4px)}
+.home-3 .services-ledger .card:last-child{
+  grid-column:1 / -1;grid-template-columns:52px minmax(0,1fr) auto;
+}
+
+@media (max-width:767px){
+  .home-3 .services-ledger{grid-template-columns:1fr}
+  .home-3 .services-ledger .card,
+  .home-3 .services-ledger .card:last-child{
+    grid-column:auto;grid-template-columns:38px minmax(0,1fr) auto;
+    min-height:0;padding:22px 4px;column-gap:10px;border-right:0;
+  }
+  .home-3 .services-ledger .card-icon{width:36px;height:36px}
+  .home-3 .services-ledger .card p{padding-right:0;font-size:13px}
+}
