@@ -192,4 +192,52 @@
     queueHome3Depth();
   }
 
+  /* ---------- Home 3: tilt 3D amortecido nos serviços ---------- */
+  const home3ServiceCards = document.querySelectorAll('.home-3 .services-ledger .card');
+  const supportsCardTilt = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+  if (home3ServiceCards.length && supportsCardTilt && !prefersReducedMotion) {
+    home3ServiceCards.forEach(card => {
+      let targetX = 0;
+      let targetY = 0;
+      let currentX = 0;
+      let currentY = 0;
+      let velocityX = 0;
+      let velocityY = 0;
+      let frame = 0;
+
+      const animateTilt = () => {
+        const stiffness = 0.115;
+        const damping = 0.72;
+        velocityX = (velocityX + (targetX - currentX) * stiffness) * damping;
+        velocityY = (velocityY + (targetY - currentY) * stiffness) * damping;
+        currentX += velocityX;
+        currentY += velocityY;
+        card.style.setProperty('--tilt-x', `${currentX.toFixed(3)}deg`);
+        card.style.setProperty('--tilt-y', `${currentY.toFixed(3)}deg`);
+        const moving = Math.abs(targetX - currentX) + Math.abs(targetY - currentY) + Math.abs(velocityX) + Math.abs(velocityY) > 0.01;
+        if (moving) frame = requestAnimationFrame(animateTilt);
+        else frame = 0;
+      };
+      const queueTilt = () => {
+        if (!frame) frame = requestAnimationFrame(animateTilt);
+      };
+
+      card.addEventListener('pointermove', event => {
+        const rect = card.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width - 0.5;
+        const y = (event.clientY - rect.top) / rect.height - 0.5;
+        targetX = y * -21;
+        targetY = x * 21;
+        card.style.setProperty('--tilt-lift', '-3px');
+        queueTilt();
+      }, { passive:true });
+      card.addEventListener('pointerleave', () => {
+        targetX = 0;
+        targetY = 0;
+        card.style.setProperty('--tilt-lift', '0px');
+        queueTilt();
+      }, { passive:true });
+    });
+  }
+
 })();
