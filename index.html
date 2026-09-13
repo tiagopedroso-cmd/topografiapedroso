@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Topografia em Arujá | Pedroso — Levantamento e Georreferenciamento</title>
+<title>Pedroso Topografia — Levantamento e Georreferenciamento em Arujá</title>
 <meta name="description" content="Empresa de topografia em Arujá especializada em levantamento topográfico, georreferenciamento e regularização de imóveis. Orçamento pelo WhatsApp.">
 <meta name="theme-color" content="#050B14">
+<link rel="preload" as="image" href="hero-home3-topografia.png" fetchpriority="high">
 
 <!-- Imagens locais usadas pelo CSS, mantidas na mesma pasta do index.html. -->
 <link rel="preload" as="image" href="equipamento-topografia.png" fetchpriority="low">
@@ -55,7 +56,7 @@
 }
 </script>
 </head>
-<body class="home-page home-1">
+<body class="home-page home-3">
 
 <a class="skip-link" href="#main">Pular para o conteúdo principal</a>
 
@@ -67,8 +68,6 @@
       </a>
       <ul class="nav-menu">
         <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><a href="index2.html">Home 2</a></li>
-        <li><a href="index3.html">Home 3</a></li>
         <li><span class="nav-disabled" aria-disabled="true">Empresa</span></li>
         <li><span class="nav-disabled" aria-disabled="true">Serviços</span></li>
         <li><span class="nav-disabled" aria-disabled="true">Área de Atuação</span></li>
@@ -80,8 +79,6 @@
     </nav>
     <div class="mobile-menu" id="mobileMenu">
       <a href="index.html" aria-current="page">Home</a>
-      <a href="index2.html">Home 2</a>
-      <a href="index3.html">Home 3</a>
       <span class="nav-disabled" aria-disabled="true">Empresa</span>
       <span class="nav-disabled" aria-disabled="true">Serviços</span>
       <span class="nav-disabled" aria-disabled="true">Área de Atuação</span>
@@ -96,11 +93,10 @@
 
 <main id="main">
 
-  <section class="hero-dark hero-static" aria-labelledby="hero-title">
+  <section class="hero-dark home3-depth" id="home3Depth" aria-labelledby="hero-title">
     <div class="hero-bg" aria-hidden="true">
-      <video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="Hero.png">
-        <source src="novo_hero.mp4" type="video/mp4">
-      </video>
+      <img class="home3-scene" src="hero-home3-topografia.png" alt="" width="1792" height="1024" loading="eager" fetchpriority="high">
+      <img class="home3-equipment-solid" src="hero-home3-equipamentos.png" alt="" width="1536" height="1024" loading="eager" fetchpriority="high">
       <div class="hero-overlay"></div>
     </div>
     <div class="container">
@@ -120,28 +116,6 @@
       </div>
     </div>
 
-  <div class="trust-strip hero-trust hide-mobile" aria-label="Credenciais">
-    <div class="marquee">
-      <div class="marquee-track">
-        <ul class="credentials">
-          <li>Registro CREA-SP</li>
-          <li>Equipamentos aferidos</li>
-          <li>Base em Arujá/SP</li>
-          <li>Retorno em até 1 hora</li>
-          <li>Atendimento em Arujá e região</li>
-          <li>Documentação para prefeitura e cartório</li>
-        </ul>
-        <ul class="credentials" aria-hidden="true">
-          <li>Registro CREA-SP</li>
-          <li>Equipamentos aferidos</li>
-          <li>Base em Arujá/SP</li>
-          <li>Retorno em até 1 hora</li>
-          <li>Atendimento em Arujá e região</li>
-          <li>Documentação para prefeitura e cartório</li>
-        </ul>
-      </div>
-    </div>
-  </div>
   </section>
 
   <section class="stats" aria-label="Números da empresa">
@@ -170,11 +144,10 @@
         <h2 id="serv-title">Serviços de topografia para cada etapa do seu terreno ou obra</h2>
         <p>Da medição inicial à regularização final, a Pedroso Topografia acompanha seu projeto do início ao fim, em Arujá e região.</p>
       </div>
-      <div class="cards-grid">
+      <div class="cards-grid services-ledger">
         <article class="card reveal">
           <div class="card-icon" aria-hidden="true">
-            <!-- Curvas de nível / relevo topográfico -->
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20c3-4 6-4 9-2s6 2 9-2"/><path d="M4 15c3-4 5-4 8-2s5 2 8-2"/><path d="M6 10c2-3 4-3 6-1s4 1 6-2"/><path d="M9 6c1-2 2-2 3-1s2 1 3-1"/></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
           </div>
           <h3>Levantamento para Usucapião</h3>
           <p>Medição e peças técnicas para processos judiciais ou extrajudiciais.</p>
@@ -182,8 +155,7 @@
         </article>
         <article class="card reveal" data-delay="1">
           <div class="card-icon" aria-hidden="true">
-            <!-- Globo + pin GPS -->
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
           </div>
           <h3>Desdobro</h3>
           <p>Divisão técnica do imóvel em novos lotes, com plantas e memoriais.</p>
@@ -191,8 +163,7 @@
         </article>
         <article class="card reveal" data-delay="2">
           <div class="card-icon" aria-hidden="true">
-            <!-- Estaca / marco de divisa -->
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="21" x2="5" y2="3"/><path d="M5 4h13l-3 4 3 4H5"/><line x1="3" y1="21" x2="21" y2="21"/></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21V12h6v9"/></svg>
           </div>
           <h3>Demarcação de Lotes</h3>
           <p>Identificação e marcação precisa dos limites reais do terreno.</p>
@@ -200,8 +171,7 @@
         </article>
         <article class="card reveal">
           <div class="card-icon" aria-hidden="true">
-            <!-- Capacete de obra -->
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h18v2H3z"/><path d="M4 17c0-5 3-9 8-9s8 4 8 9"/><path d="M10 8V5h4v3"/></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
           </div>
           <h3>Levantamento Planialtimétrico</h3>
           <p>Plantas em UTM, curvas de nível e cadastro completo do terreno.</p>
@@ -209,8 +179,7 @@
         </article>
         <article class="card reveal" data-delay="1">
           <div class="card-icon" aria-hidden="true">
-            <!-- Documento com selo/check -->
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><polyline points="9 15 11 17 15 13"/></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-4V3H8v4H4l8 9 8-9z"/><line x1="4" y1="21" x2="20" y2="21"/></svg>
           </div>
           <h3>Projeto de Terraplanagem</h3>
           <p>Planejamento técnico de cortes, aterros, níveis e movimentação de solo.</p>
@@ -218,8 +187,7 @@
         </article>
         <article class="card reveal" data-delay="2">
           <div class="card-icon" aria-hidden="true">
-            <!-- Drone quadricóptero (vista de topo) -->
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="5" r="2.2"/><circle cx="19" cy="5" r="2.2"/><circle cx="5" cy="19" r="2.2"/><circle cx="19" cy="19" r="2.2"/><line x1="6.5" y1="6.5" x2="9.5" y2="9.5"/><line x1="17.5" y1="6.5" x2="14.5" y2="9.5"/><line x1="6.5" y1="17.5" x2="9.5" y2="14.5"/><line x1="17.5" y1="17.5" x2="14.5" y2="14.5"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
           </div>
           <h3>Georreferenciamento</h3>
           <p>Levantamento geodésico para identificação e regularização de imóveis.</p>
@@ -227,7 +195,7 @@
         </article>
         <article class="card reveal" data-delay="3">
           <div class="card-icon" aria-hidden="true">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 12 10 5 10-5M2 17l10 5 10-5"/><path d="M18 4v6M15 7h6"/></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 9h6l2 3-2 3H9l-2-3 2-3Z"/><path d="M7 12H2M17 12h5M5 8l4 2M19 8l-4 2M5 16l4-2M19 16l-4-2"/><circle cx="3" cy="6" r="2"/><circle cx="21" cy="6" r="2"/><circle cx="3" cy="18" r="2"/><circle cx="21" cy="18" r="2"/></svg>
           </div>
           <h3>Mapeamento com Drone</h3>
           <p>Mapeamento aéreo de grandes áreas com precisão e agilidade.</p>
@@ -249,26 +217,22 @@
       </div>
       <div class="why-grid">
         <article class="why-item reveal">
-          <!-- Selo / certificação CREA -->
-          <span class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 2 3-1 1 3 3 1-1 3 2 3-2 3 1 3-3 1-1 3-3-1-3 2-3-2-3 1-1-3-3-1 1-3-2-3 2-3-1-3 3-1 1-3 3 1z"/><polyline points="9 12 11 14 15 10"/></svg></span>
+          <span class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 4.5 6v5.2c0 4.7 3.1 8.2 7.5 9.8 4.4-1.6 7.5-5.1 7.5-9.8V6L12 3Z"/><path d="m8.8 12 2.1 2.1 4.5-4.6"/></svg></span>
           <h3>Responsabilidade técnica</h3>
           <p>Acompanhamento direto e serviço conduzido por equipe própria, do campo à entrega final.</p>
         </article>
         <article class="why-item reveal" data-delay="1">
-          <!-- Mira topográfica / crosshair -->
-          <span class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor"/><line x1="12" y1="2" x2="12" y2="6"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="2" y1="12" x2="6" y2="12"/><line x1="18" y1="12" x2="22" y2="12"/></svg></span>
+          <span class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5"/><path d="M12 1.5V5M12 19v3.5M1.5 12H5M19 12h3.5"/></svg></span>
           <h3>Precisão em campo</h3>
           <p>Equipamentos calibrados e metodologia padronizada para resultados técnicos confiáveis.</p>
         </article>
         <article class="why-item reveal" data-delay="2">
-          <!-- Calendário com check -->
-          <span class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="16" y1="3" x2="16" y2="7"/><polyline points="9 15 11 17 15 13"/></svg></span>
+          <span class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
           <h3>Prazo claro desde o início</h3>
           <p>Escopo e cronograma alinhados antes do serviço, sem surpresas durante o projeto.</p>
         </article>
         <article class="why-item reveal" data-delay="3">
-          <!-- Lupa sobre documento -->
-          <span class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2H5a2 2 0 00-2 2v16a2 2 0 002 2h11a2 2 0 002-2v-8"/><circle cx="17" cy="7" r="4"/><line x1="20" y1="10" x2="23" y2="13"/><line x1="7" y1="14" x2="12" y2="14"/><line x1="7" y1="18" x2="14" y2="18"/></svg></span>
+          <span class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="m7.8 12.1 2.7 2.8 5.9-6"/></svg></span>
           <h3>Conferência antes da entrega</h3>
           <p>Checagem interna de plantas, memoriais e dados para reduzir retrabalho e atrasos.</p>
         </article>
@@ -316,8 +280,6 @@
         <div class="footer-title">Navegação</div>
         <ul class="footer-nav">
           <li><a href="index.html">Home</a></li>
-          <li><a href="index2.html">Home 2</a></li>
-          <li><a href="index3.html">Home 3</a></li>
           <li><span class="nav-disabled" aria-disabled="true">Empresa</span></li>
           <li><span class="nav-disabled" aria-disabled="true">Serviços</span></li>
           <li><span class="nav-disabled" aria-disabled="true">Área de Atuação</span></li>
