@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="favicon.png">
 <title>Serviços de Topografia em Arujá | Pedroso Topografia</title>
 <meta name="description" content="Levantamento topográfico, georreferenciamento, locação de obra e regularização de imóveis em Arujá/SP. Equipe própria e orçamento pelo WhatsApp.">
 <meta name="theme-color" content="#050B14">
@@ -41,10 +42,10 @@
       </a>
       <ul class="nav-menu">
         <li><a href="index.html">Home</a></li>
-        <li><span class="nav-disabled" aria-disabled="true">Empresa</span></li>
-        <li><span class="nav-disabled" aria-disabled="true">Serviços</span></li>
-        <li><span class="nav-disabled" aria-disabled="true">Área de Atuação</span></li>
-        <li><span class="nav-disabled" aria-disabled="true">Contato</span></li>
+        <li><a href="empresa.html">Empresa</a></li>
+        <li><a href="servicos.html" aria-current="page">Serviços</a></li>
+        <li><a href="#area-de-atuacao">Área de Atuação</a></li>
+        <li><a href="contato.html">Contato</a></li>
       </ul>
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -52,10 +53,10 @@
     </nav>
     <div class="mobile-menu" id="mobileMenu">
       <a href="index.html">Home</a>
-      <span class="nav-disabled" aria-disabled="true">Empresa</span>
-      <span class="nav-disabled" aria-disabled="true">Serviços</span>
-      <span class="nav-disabled" aria-disabled="true">Área de Atuação</span>
-      <span class="nav-disabled" aria-disabled="true">Contato</span>
+      <a href="empresa.html">Empresa</a>
+      <a href="servicos.html" aria-current="page">Serviços</a>
+      <a href="#area-de-atuacao">Área de Atuação</a>
+      <a href="contato.html">Contato</a>
       <a class="btn btn-wa" href="https://wa.me/55" target="_blank" rel="noopener" style="margin-top:8px">
         <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .103 5.334.1 11.892c0 2.096.549 4.14 1.594 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411l.015-.039z"/></svg>
         Falar no WhatsApp
@@ -66,18 +67,37 @@
 
 <main id="main">
 
-  <header class="page-header-dark">
-    <div class="container">
-      <ol class="breadcrumbs reveal" aria-label="Trilha de navegação">
-        <li><a href="index.html">Home</a></li>
-        <li><span aria-current="page">Serviços</span></li>
-      </ol>
-      <h1 class="reveal" data-delay="1">Serviços de topografia para obra, regularização e documentação</h1>
-      <p class="lead reveal" data-delay="2">Metodologia padronizada, equipamentos calibrados e entrega organizada — do levantamento em campo à documentação final, em Arujá e região.</p>
+  <header class="page-header-dark services-hero">
+    <div class="services-hero-background" aria-hidden="true">
+      <video class="is-active" autoplay muted loop playsinline preload="auto" disablepictureinpicture>
+        <source src="hero-servicos-loop.mp4" type="video/mp4">
+      </video>
+      <video muted loop playsinline preload="auto" disablepictureinpicture>
+        <source src="hero-servicos-loop.mp4" type="video/mp4">
+      </video>
     </div>
+    <div class="container services-hero-layout">
+      <div class="services-hero-copy">
+        <h1 class="services-hero-title reveal" data-delay="1" aria-label="Serviços de topografia para obra, regularização, documentação e usucapião">
+          <span class="services-hero-title-fixed" aria-hidden="true">Serviços de topografia</span>
+          <span class="services-hero-title-second" aria-hidden="true">para <span class="services-hero-title-window"><span class="services-hero-title-current" id="servicesHeroCurrent">obra.</span><span class="services-hero-title-next" id="servicesHeroNext"></span></span></span>
+        </h1>
+        <p class="lead reveal" data-delay="2">Metodologia padronizada, equipamentos calibrados e entrega organizada — do levantamento em campo à documentação final, em Arujá e região.</p>
+        <div class="services-hero-actions reveal" data-delay="3">
+          <a class="btn btn-wa btn-lg" href="https://wa.me/55" target="_blank" rel="noopener">
+            <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .103 5.334.1 11.892c0 2.096.549 4.14 1.594 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411l.015-.039z"/></svg>
+            Falar no WhatsApp agora
+          </a>
+        </div>
+      </div>
+    </div>
+    <a class="hero-scroll-cue" href="#servicos-conteudo" aria-label="Role para baixo para descobrir">
+      <span class="hero-scroll-label">Role para baixo para descobrir</span>
+      <span class="hero-scroll-chevrons" aria-hidden="true"><i></i><i></i></span>
+    </a>
   </header>
 
-  <section>
+  <section id="servicos-conteudo">
     <div class="container">
 
       <div class="service-group reveal">
@@ -177,7 +197,7 @@
     </div>
   </section>
 
-  <section class="cta-final">
+  <section class="cta-final services-cta-final">
     <div class="container">
       <h2>Não achou o serviço que precisa?</h2>
       <p>Fala com a gente pelo WhatsApp e explica sua necessidade — a gente te orienta sobre o melhor caminho técnico.</p>
@@ -185,6 +205,30 @@
         <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .103 5.334.1 11.892c0 2.096.549 4.14 1.594 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411l.015-.039z"/></svg>
         Falar no WhatsApp
       </a>
+    </div>
+  </section>
+
+  <section class="services-area" id="area-de-atuacao" aria-labelledby="area-title">
+    <div class="container">
+      <div class="region-block reveal">
+        <div class="services-area-copy">
+          <p class="eyebrow">Área de atuação</p>
+          <h2 id="area-title">Topografia em Arujá e região</h2>
+          <p>A Pedroso Topografia tem base em Arujá e atende toda a região com equipe própria, metodologia padronizada e conhecimento dos processos locais.</p>
+        </div>
+
+        <figure class="services-area-map">
+          <div class="services-area-map-viewport">
+            <img src="mapa-area-atuacao.svg" width="760" height="760" loading="lazy" decoding="async" alt="Mapa com os limites municipais de Arujá, Santa Isabel, Itaquaquecetuba, Guararema, Mogi das Cruzes e Suzano, com Arujá destacada como base da Pedroso Topografia.">
+          </div>
+          <figcaption><span class="services-area-map-hint">Deslize para explorar o mapa. </span>Limites municipais simplificados a partir da <a href="https://www.ibge.gov.br/geociencias/organizacao-do-territorio/estrutura-territorial/15774-malhas" target="_blank" rel="noopener">malha geográfica do IBGE</a>. Mapa de referência, sem finalidade cadastral.</figcaption>
+        </figure>
+
+        <a class="btn btn-wa" href="https://wa.me/55" target="_blank" rel="noopener">
+          <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .103 5.334.1 11.892c0 2.096.549 4.14 1.594 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411l.015-.039z"/></svg>
+          Consultar disponibilidade no WhatsApp
+        </a>
+      </div>
     </div>
   </section>
 
@@ -205,10 +249,10 @@
         <div class="footer-title">Navegação</div>
         <ul class="footer-nav">
           <li><a href="index.html">Home</a></li>
-          <li><span class="nav-disabled" aria-disabled="true">Empresa</span></li>
-          <li><span class="nav-disabled" aria-disabled="true">Serviços</span></li>
-          <li><span class="nav-disabled" aria-disabled="true">Área de Atuação</span></li>
-          <li><span class="nav-disabled" aria-disabled="true">Contato</span></li>
+          <li><a href="empresa.html">Empresa</a></li>
+          <li><a href="servicos.html" aria-current="page">Serviços</a></li>
+          <li><a href="#area-de-atuacao">Área de Atuação</a></li>
+          <li><a href="contato.html">Contato</a></li>
         </ul>
       </div>
       <div>
@@ -221,7 +265,10 @@
       </div>
     </div>
     <div class="footer-bottom">
-      © 2026 Pedroso Topografia. Topografia em Arujá e região. Todos os direitos reservados.
+      <span>© 2026 Pedroso Topografia. Topografia em Arujá e região. Todos os direitos reservados.</span>
+      <a class="footer-developer" href="https://www.inovalogix.com.br" target="_blank" rel="noopener" aria-label="Site da InovaLogix">
+        <img src="inovalogix-logo.png" alt="InovaLogix" width="180" height="80" loading="lazy">
+      </a>
     </div>
   </div>
 </footer>

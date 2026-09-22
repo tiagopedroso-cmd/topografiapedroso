@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="favicon.png">
 <title>Pedroso Topografia — Levantamento e Georreferenciamento em Arujá</title>
 <meta name="description" content="Empresa de topografia em Arujá especializada em levantamento topográfico, georreferenciamento e regularização de imóveis. Orçamento pelo WhatsApp.">
 <meta name="theme-color" content="#050B14">
@@ -68,10 +69,10 @@
       </a>
       <ul class="nav-menu">
         <li><a href="index.html" aria-current="page">Home</a></li>
-        <li><span class="nav-disabled" aria-disabled="true">Empresa</span></li>
-        <li><span class="nav-disabled" aria-disabled="true">Serviços</span></li>
-        <li><span class="nav-disabled" aria-disabled="true">Área de Atuação</span></li>
-        <li><span class="nav-disabled" aria-disabled="true">Contato</span></li>
+        <li><a href="empresa.html">Empresa</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="servicos.html#area-de-atuacao">Área de Atuação</a></li>
+        <li><a href="contato.html">Contato</a></li>
       </ul>
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -79,10 +80,10 @@
     </nav>
     <div class="mobile-menu" id="mobileMenu">
       <a href="index.html" aria-current="page">Home</a>
-      <span class="nav-disabled" aria-disabled="true">Empresa</span>
-      <span class="nav-disabled" aria-disabled="true">Serviços</span>
-      <span class="nav-disabled" aria-disabled="true">Área de Atuação</span>
-      <span class="nav-disabled" aria-disabled="true">Contato</span>
+      <a href="empresa.html">Empresa</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="servicos.html#area-de-atuacao">Área de Atuação</a>
+      <a href="contato.html">Contato</a>
       <a class="btn btn-wa" href="https://wa.me/55" target="_blank" rel="noopener" style="margin-top:8px">
         <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .103 5.334.1 11.892c0 2.096.549 4.14 1.594 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411l.015-.039z"/></svg>
         Falar no WhatsApp
@@ -100,12 +101,12 @@
       <div class="hero-overlay"></div>
     </div>
     <div class="container">
-      <h1 id="hero-title" class="hero-words-stack">
+      <h1 id="hero-title" class="hero-words-stack reveal" data-delay="1">
         <span class="hero-word">Precisão que</span>
         <span class="hero-word">constrói o <em>futuro.</em></span>
       </h1>
-      <p class="hero-sub">Levantamentos topográficos de alta precisão para projetos seguros, eficientes e sustentáveis. Tecnologia, experiência e compromisso em cada detalhe.</p>
-      <div class="hero-ctas">
+      <p class="hero-sub reveal" data-delay="2">Levantamentos topográficos de alta precisão para projetos seguros, eficientes e sustentáveis. Tecnologia, experiência e compromisso em cada detalhe.</p>
+      <div class="hero-ctas reveal" data-delay="3">
         <a class="btn btn-wa btn-lg" href="https://wa.me/55" target="_blank" rel="noopener">
           <svg class="wa-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .103 5.334.1 11.892c0 2.096.549 4.14 1.594 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411l.015-.039z"/></svg>
           Falar no WhatsApp agora
@@ -115,10 +116,13 @@
         </a>
       </div>
     </div>
-
+    <a class="hero-scroll-cue" href="#home-content" aria-label="Role para baixo para descobrir">
+      <span class="hero-scroll-label">Role para baixo para descobrir</span>
+      <span class="hero-scroll-chevrons" aria-hidden="true"><i></i><i></i></span>
+    </a>
   </section>
 
-  <section class="stats" aria-label="Números da empresa">
+  <section class="stats" id="home-content" aria-label="Números da empresa">
     <div class="container">
       <div class="stats-grid">
         <div class="reveal">
@@ -140,7 +144,6 @@
   <section class="services-home" aria-labelledby="serv-title">
     <div class="container">
       <div class="section-head reveal">
-        <span class="eyebrow-num" data-num="01">O que fazemos</span>
         <h2 id="serv-title">Serviços de topografia para cada etapa do seu terreno ou obra</h2>
         <p>Da medição inicial à regularização final, a Pedroso Topografia acompanha seu projeto do início ao fim, em Arujá e região.</p>
       </div>
@@ -211,7 +214,6 @@
   <section class="why-section" aria-labelledby="why-title">
     <div class="container">
       <div class="why-head reveal">
-        <span class="eyebrow-num" data-num="02">Por que escolher</span>
         <h2 id="why-title">Por que escolher a <em>Pedroso Topografia</em></h2>
         <p>Precisão técnica, responsabilidade e previsibilidade em cada etapa do seu projeto.</p>
       </div>
@@ -240,13 +242,49 @@
     </div>
   </section>
 
+  <section class="process-flow-section" aria-labelledby="process-title">
+    <div class="container">
+      <div class="process-flow-head reveal">
+        <span class="process-flow-kicker">Como funciona</span>
+        <h2 id="process-title">Um processo claro, do primeiro contato à entrega.</h2>
+        <p>Cada etapa é alinhada para que você saiba o que será feito, quando e o que receberá ao final.</p>
+      </div>
+      <ol class="process-flow" aria-label="Etapas do atendimento">
+        <li class="process-step reveal">
+          <span class="process-step-number">01</span>
+          <h3>Entendemos a necessidade</h3>
+          <p>Você apresenta o objetivo, o imóvel e a etapa atual do projeto.</p>
+        </li>
+        <li class="process-step reveal" data-delay="1">
+          <span class="process-step-number">02</span>
+          <h3>Definimos o escopo</h3>
+          <p>Alinhamos documentos, área, entregáveis, prazo e condições antes do início.</p>
+        </li>
+        <li class="process-step reveal" data-delay="2">
+          <span class="process-step-number">03</span>
+          <h3>Executamos em campo</h3>
+          <p>A equipe realiza as medições necessárias com método e precisão.</p>
+        </li>
+        <li class="process-step reveal" data-delay="3">
+          <span class="process-step-number">04</span>
+          <h3>Processamos e conferimos</h3>
+          <p>Os dados são organizados, calculados e revisados antes da emissão.</p>
+        </li>
+        <li class="process-step reveal" data-delay="4">
+          <span class="process-step-number">05</span>
+          <h3>Entregamos com clareza</h3>
+          <p>Você recebe os arquivos e as orientações correspondentes ao serviço contratado.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
   <section aria-labelledby="area-title">
     <div class="container">
       <div class="region-block reveal">
-        <span class="eyebrow-num" data-num="03">Onde atuamos</span>
         <h2 id="area-title" style="margin-top:var(--s2)">A topografia de referência em Arujá — e também na região</h2>
         <p>A Pedroso Topografia é especializada, mas leva a mesma precisão técnica para Santa Isabel, Itaquaquecetuba, Guararema, Mogi das Cruzes e Suzano. Consulte disponibilidade pelo WhatsApp.</p>
-        <a class="btn btn-secondary hide-mobile" href="area-de-atuacao.html">Ver área de atuação <span class="arrow">→</span></a>
+        <a class="btn btn-secondary hide-mobile" href="servicos.html#area-de-atuacao">Ver área de atuação <span class="arrow">→</span></a>
       </div>
     </div>
   </section>
@@ -280,10 +318,10 @@
         <div class="footer-title">Navegação</div>
         <ul class="footer-nav">
           <li><a href="index.html">Home</a></li>
-          <li><span class="nav-disabled" aria-disabled="true">Empresa</span></li>
-          <li><span class="nav-disabled" aria-disabled="true">Serviços</span></li>
-          <li><span class="nav-disabled" aria-disabled="true">Área de Atuação</span></li>
-          <li><span class="nav-disabled" aria-disabled="true">Contato</span></li>
+          <li><a href="empresa.html">Empresa</a></li>
+          <li><a href="servicos.html">Serviços</a></li>
+          <li><a href="servicos.html#area-de-atuacao">Área de Atuação</a></li>
+          <li><a href="contato.html">Contato</a></li>
         </ul>
       </div>
       <div>
@@ -296,7 +334,10 @@
       </div>
     </div>
     <div class="footer-bottom">
-      © 2026 Pedroso Topografia. Topografia em Arujá e região. Todos os direitos reservados.
+      <span>© 2026 Pedroso Topografia. Topografia em Arujá e região. Todos os direitos reservados.</span>
+      <a class="footer-developer" href="https://www.inovalogix.com.br" target="_blank" rel="noopener" aria-label="Site da InovaLogix">
+        <img src="inovalogix-logo.png" alt="InovaLogix" width="180" height="80" loading="lazy">
+      </a>
     </div>
   </div>
 </footer>

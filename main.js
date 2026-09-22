@@ -10,14 +10,130 @@
         window.requestAnimationFrame(() => {
           const y = window.scrollY;
           header.classList.toggle('scrolled', y > 24);
-          header.classList.toggle('compact', y > 120);
+          header.classList.toggle('compact', y > 120 && window.innerWidth < 768);
           ticking = false;
         });
         ticking = true;
       }
     };
     window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
     onScroll();
+  }
+
+  /* ---------- Empresa: título digitado na Hero ---------- */
+  const companyHeroTyped = document.getElementById('companyHeroTyped');
+  if (companyHeroTyped && !prefersReducedMotion) {
+    const phrases = [
+      'todos os detalhes!',
+      'todas as necessidades!',
+      'todos os solos!',
+      'todos os trâmites!',
+      'todos os processos!'
+    ];
+    let phraseIndex = 0;
+    let charIndex = phrases[0].length;
+    let deleting = false;
+
+    const typeHeroPhrase = () => {
+      const phrase = phrases[phraseIndex];
+
+      if (!deleting && charIndex === phrase.length) {
+        deleting = true;
+        window.setTimeout(typeHeroPhrase, 1650);
+        return;
+      }
+
+      if (deleting && charIndex === 0) {
+        deleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        window.setTimeout(typeHeroPhrase, 170);
+        return;
+      }
+
+      charIndex += deleting ? -1 : 1;
+      companyHeroTyped.textContent = phrases[phraseIndex].slice(0, charIndex);
+      window.setTimeout(typeHeroPhrase, deleting ? 24 : 38);
+    };
+
+    window.setTimeout(typeHeroPhrase, 1650);
+  }
+
+  /* ---------- Serviços: transição contínua entre ciclos do vídeo ---------- */
+  const servicesHeroBackground = document.querySelector('.services-hero-background');
+  const servicesHeroVideos = servicesHeroBackground?.querySelectorAll('video');
+  if (servicesHeroVideos?.length === 2) {
+    let activeIndex = 0;
+    let crossfading = false;
+    const resumeVideo = video => {
+      if (video.ended) video.currentTime = 0;
+      if (video.paused) video.play().catch(() => {});
+    };
+    const crossfadeLoop = () => {
+      if (crossfading) return;
+      crossfading = true;
+      const outgoing = servicesHeroVideos[activeIndex];
+      const incoming = servicesHeroVideos[1 - activeIndex];
+      incoming.currentTime = 0;
+      incoming.play().then(() => {
+        servicesHeroBackground.classList.add('is-crossfading');
+        void servicesHeroBackground.offsetWidth;
+        outgoing.classList.remove('is-active');
+        incoming.classList.add('is-active');
+        window.setTimeout(() => {
+          activeIndex = 1 - activeIndex;
+          outgoing.pause();
+          outgoing.currentTime = 0;
+          servicesHeroBackground.classList.remove('is-crossfading');
+          crossfading = false;
+        }, 850);
+      }).catch(() => { crossfading = false; });
+    };
+    servicesHeroVideos.forEach((video, index) => {
+      video.muted = true;
+      video.loop = true;
+      video.addEventListener('timeupdate', () => {
+        if (index !== activeIndex || crossfading || !Number.isFinite(video.duration)) return;
+        const overlap = Math.min(1.4, video.duration * .3);
+        if (video.currentTime >= video.duration - overlap) crossfadeLoop();
+      });
+      video.addEventListener('ended', () => {
+        if (index === activeIndex) resumeVideo(video);
+      });
+      video.addEventListener('pause', () => {
+        if (index === activeIndex && !document.hidden) {
+          window.setTimeout(() => {
+            if (index === activeIndex) resumeVideo(video);
+          }, 120);
+        }
+      });
+    });
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden) resumeVideo(servicesHeroVideos[activeIndex]);
+    });
+    resumeVideo(servicesHeroVideos[0]);
+  }
+
+  const servicesHeroCurrent = document.getElementById('servicesHeroCurrent');
+  const servicesHeroNext = document.getElementById('servicesHeroNext');
+  if (servicesHeroCurrent && servicesHeroNext) {
+    const servicesHeroWindow = servicesHeroCurrent.parentElement;
+    const phrases = ['obra.', 'regularização.', 'documentação.', 'usucapião.'];
+    let phraseIndex = 0;
+    window.setInterval(() => {
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      if (prefersReducedMotion) {
+        servicesHeroCurrent.textContent = phrases[phraseIndex];
+        return;
+      }
+      servicesHeroNext.textContent = phrases[phraseIndex];
+      servicesHeroWindow.classList.add('is-changing');
+      window.setTimeout(() => {
+        servicesHeroCurrent.textContent = phrases[phraseIndex];
+        servicesHeroWindow.classList.remove('is-changing');
+        servicesHeroNext.textContent = '';
+      }, 500);
+    }, 3000);
   }
 
   /* ---------- Floating WhatsApp: reveal after meaningful scroll ---------- */
@@ -192,8 +308,123 @@
     queueHome3Depth();
   }
 
+  /* ---------- Empresa: profundidade da Hero em dois planos ---------- */
+  const companyHeroDepth = document.getElementById('companyHeroDepth');
+  if (companyHeroDepth && !prefersReducedMotion) {
+    let companyHeroFrame = 0;
+    const updateCompanyHeroDepth = () => {
+      companyHeroFrame = 0;
+      if (window.innerWidth <= 900) {
+        companyHeroDepth.style.setProperty('--company-scene-y', '0px');
+        companyHeroDepth.style.setProperty('--company-man-y', '0px');
+        return;
+      }
+      const rect = companyHeroDepth.getBoundingClientRect();
+      const progress = Math.max(0, Math.min(1, -rect.top / Math.max(rect.height, 1)));
+      companyHeroDepth.style.setProperty('--company-scene-y', `${(progress * rect.height * 0.13).toFixed(2)}px`);
+      companyHeroDepth.style.setProperty('--company-man-y', `${(progress * rect.height * 0.4).toFixed(2)}px`);
+    };
+    const queueCompanyHeroDepth = () => {
+      if (!companyHeroFrame) companyHeroFrame = window.requestAnimationFrame(updateCompanyHeroDepth);
+    };
+    window.addEventListener('scroll', queueCompanyHeroDepth, { passive:true });
+    window.addEventListener('resize', queueCompanyHeroDepth, { passive:true });
+    queueCompanyHeroDepth();
+  }
+
+  /* ---------- Home: esteira contínua de serviços ---------- */
+  const servicesLedger = document.querySelector('.home-3 .services-ledger');
+  if (servicesLedger && !servicesLedger.dataset.marqueeReady) {
+    servicesLedger.dataset.marqueeReady = 'true';
+    const viewport = document.createElement('div');
+    viewport.className = 'services-marquee-viewport';
+    servicesLedger.parentNode.insertBefore(viewport, servicesLedger);
+    viewport.appendChild(servicesLedger);
+
+    const primaryGroup = document.createElement('div');
+    primaryGroup.className = 'services-marquee-group';
+    Array.from(servicesLedger.children).forEach(card => {
+      card.classList.add('in');
+      primaryGroup.appendChild(card);
+    });
+
+    const duplicateGroup = primaryGroup.cloneNode(true);
+    duplicateGroup.setAttribute('aria-hidden', 'true');
+    duplicateGroup.querySelectorAll('a,button').forEach(element => element.setAttribute('tabindex', '-1'));
+    servicesLedger.append(primaryGroup, duplicateGroup);
+    servicesLedger.classList.add('is-marquee-ready');
+
+    let position = 0;
+    let previousTime = performance.now();
+    let pauseUntil = 0;
+    let groupWidth = 1;
+    let dragging = false;
+    let dragged = false;
+    let pointerStart = 0;
+    let positionStart = 0;
+
+    const measureMarquee = () => {
+      const gap = parseFloat(getComputedStyle(servicesLedger).gap) || 0;
+      groupWidth = primaryGroup.getBoundingClientRect().width + gap;
+    };
+    const wrapPosition = () => {
+      while (position <= -groupWidth) position += groupWidth;
+      while (position > 0) position -= groupWidth;
+    };
+    const renderMarquee = now => {
+      const elapsed = Math.min(40, now - previousTime);
+      previousTime = now;
+      if (!dragging && !prefersReducedMotion && now > pauseUntil) position -= elapsed * 0.026;
+      wrapPosition();
+      servicesLedger.style.transform = `translate3d(${position.toFixed(2)}px,0,0)`;
+      requestAnimationFrame(renderMarquee);
+    };
+
+    viewport.addEventListener('pointerdown', event => {
+      if (event.button !== 0) return;
+      dragging = true;
+      dragged = false;
+      pointerStart = event.clientX;
+      positionStart = position;
+      viewport.classList.add('is-dragging');
+      viewport.setPointerCapture(event.pointerId);
+    });
+    viewport.addEventListener('pointermove', event => {
+      if (!dragging) return;
+      const distance = event.clientX - pointerStart;
+      dragged = dragged || Math.abs(distance) > 5;
+      position = positionStart + distance;
+      wrapPosition();
+    });
+    const endMarqueeDrag = event => {
+      if (!dragging) return;
+      dragging = false;
+      pauseUntil = performance.now() + 1200;
+      viewport.classList.remove('is-dragging');
+      if (viewport.hasPointerCapture(event.pointerId)) viewport.releasePointerCapture(event.pointerId);
+    };
+    viewport.addEventListener('pointerup', endMarqueeDrag);
+    viewport.addEventListener('pointercancel', endMarqueeDrag);
+    viewport.addEventListener('click', event => {
+      if (!dragged) return;
+      event.preventDefault();
+      event.stopPropagation();
+      dragged = false;
+    }, true);
+    viewport.addEventListener('wheel', event => {
+      event.preventDefault();
+      const wheelTravel = Math.abs(event.deltaX) > Math.abs(event.deltaY) ? event.deltaX : event.deltaY;
+      position -= wheelTravel * 0.48;
+      pauseUntil = performance.now() + 900;
+      wrapPosition();
+    }, { passive:false });
+    window.addEventListener('resize', measureMarquee, { passive:true });
+    measureMarquee();
+    requestAnimationFrame(renderMarquee);
+  }
+
   /* ---------- Home 3: tilt 3D amortecido nos serviços ---------- */
-  const home3ServiceCards = document.querySelectorAll('.home-3 .services-ledger .card');
+  const home3ServiceCards = document.querySelectorAll('.home-3 .services-marquee-group:first-child .card');
   const supportsCardTilt = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
   if (home3ServiceCards.length && supportsCardTilt && !prefersReducedMotion) {
     home3ServiceCards.forEach(card => {
