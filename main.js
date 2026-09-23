@@ -35,6 +35,30 @@
     let charIndex = phrases[0].length;
     let deleting = false;
 
+    const renderCompanyPhrase = (value) => {
+      if (!window.matchMedia('(max-width: 767px)').matches) {
+        companyHeroTyped.textContent = value;
+        return;
+      }
+      const parts = /^(todos os|todas as)(.*)$/.exec(value);
+      if (!parts) {
+        companyHeroTyped.textContent = value;
+        return;
+      }
+      const prefix = document.createElement('span');
+      prefix.className = 'company-hero-typed-prefix';
+      prefix.textContent = parts[1] + ' ';
+      const tailText = parts[2].trimStart();
+      if (!tailText) {
+        companyHeroTyped.replaceChildren(prefix);
+        return;
+      }
+      const tail = document.createElement('span');
+      tail.className = 'company-hero-typed-tail';
+      tail.textContent = tailText;
+      companyHeroTyped.replaceChildren(prefix, tail);
+    };
+
     const typeHeroPhrase = () => {
       const phrase = phrases[phraseIndex];
 
@@ -52,7 +76,7 @@
       }
 
       charIndex += deleting ? -1 : 1;
-      companyHeroTyped.textContent = phrases[phraseIndex].slice(0, charIndex);
+      renderCompanyPhrase(phrases[phraseIndex].slice(0, charIndex));
       window.setTimeout(typeHeroPhrase, deleting ? 24 : 38);
     };
 

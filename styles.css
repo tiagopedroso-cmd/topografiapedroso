@@ -2476,3 +2476,101 @@ h1,h2,h3,p,a,li{overflow-wrap:break-word}
   .empresa-page .company-introduction-media{height:110px}
   .empresa-page .company-delivery-media{height:130px}
 }
+
+/* Menu compacto: azul institucional, tipografia da Hero e meia tela. */
+.btn-label-mobile,.mobile-menu-social{display:none}
+.empresa-page .company-hero h1 .company-hero-typed-prefix,
+.empresa-page .company-hero h1 .company-hero-typed-tail{display:inline}
+@media (max-width:1023px){
+  body.menu-open .site-header{background:var(--brand);border-bottom-color:rgba(255,255,255,.18)}
+  body.menu-open .nav-toggle{color:#fff;border-color:rgba(255,255,255,.35)}
+  .mobile-menu.open{
+    top:64px;bottom:auto;height:50dvh;max-height:calc(100dvh - 64px);
+    padding:14px 20px 18px;background:var(--brand);
+    border-top:1px solid rgba(255,255,255,.18);
+    box-shadow:0 20px 40px rgba(2,25,48,.24);
+  }
+  .mobile-menu.open > a:not(.btn){
+    min-height:44px;padding:9px 4px;
+    color:#fff;font-family:var(--font-display);
+    font-size:clamp(16px,4.5vw,20px);font-weight:800;line-height:1.2;
+    border-bottom:1px solid rgba(255,255,255,.24);
+  }
+  .mobile-menu.open > a:not(.btn):hover,
+  .mobile-menu.open > a:not(.btn):focus,
+  .mobile-menu.open > a[aria-current="page"]{color:#fff}
+  .mobile-menu.open > .btn-wa{display:none}
+  .mobile-menu-social{
+    display:flex;align-items:center;justify-content:center;
+    gap:18px;margin-top:auto;padding-top:12px;
+  }
+  .mobile-menu.open .mobile-menu-social a{
+    display:flex;align-items:center;justify-content:center;
+    width:42px;height:42px;min-height:42px;padding:0;
+    color:#fff;border:1px solid rgba(255,255,255,.45);border-radius:12px;
+    background:rgba(255,255,255,.08);
+  }
+  .mobile-menu-social svg{width:21px;height:21px}
+}
+
+/* Heros: mudanças solicitadas somente em telas responsivas. */
+@media (max-width:767px){
+  .home-page .home3-depth{align-items:center}
+  .home-page .home3-depth > .container{
+    display:flex;flex-direction:column;align-items:center;
+    width:100%;margin-bottom:clamp(120px,20svh,180px);
+    text-align:center;
+  }
+  .home-page .home3-depth .hero-words-stack,
+  .home-page .home3-depth .hero-sub{margin-inline:auto;text-align:center}
+  .home-page .home3-depth .hero-ctas{width:min(100%,340px);justify-content:center}
+  .home-page .home3-depth .home3-equipment-solid{
+    left:50%;right:auto;bottom:0;width:min(108vw,500px);
+    transform:translateX(-50%);
+  }
+  .home-page .hero-scroll-cue,
+  .services-page .hero-scroll-cue{display:flex}
+  .home-page .hero-ctas .btn-wa,
+  .empresa-page .company-hero-actions .btn-wa,
+  .services-page .services-hero-actions .btn-wa{display:inline-flex}
+  .home-page .hero-ctas .btn-label-desktop,
+  .empresa-page .company-hero-actions .btn-label-desktop,
+  .services-page .services-hero-actions .btn-label-desktop{display:none}
+  .home-page .hero-ctas .btn-label-mobile,
+  .empresa-page .company-hero-actions .btn-label-mobile,
+  .services-page .services-hero-actions .btn-label-mobile{display:inline}
+
+  .empresa-page .company-hero-actions{
+    flex-direction:column;align-items:stretch;width:100%;
+  }
+  .empresa-page .company-hero-actions .btn{width:100%;justify-content:center}
+  .empresa-page .company-hero h1 .company-hero-typed{display:block}
+  .empresa-page .company-hero h1 .company-hero-typed-prefix{white-space:nowrap}
+  .empresa-page .company-hero h1 .company-hero-typed-tail{display:block}
+  .empresa-page .company-hero .company-hero-cursor{display:none!important}
+}
+
+@media (max-width:1023px) and (max-height:650px){
+  .mobile-menu.open{padding:8px 16px 10px}
+  .mobile-menu.open > a:not(.btn){min-height:39px;padding:6px 4px;font-size:15px}
+  .mobile-menu-social{padding-top:7px}
+  .mobile-menu.open .mobile-menu-social a{width:38px;height:38px;min-height:38px}
+}
+@media (max-width:360px){
+  .empresa-page .company-hero-copy{width:60%}
+  .empresa-page .company-hero-actions .btn{padding-inline:5px;font-size:11px;gap:5px}
+  .empresa-page .company-hero-actions .wa-icon{width:17px;height:17px}
+}
+@media (max-width:360px) and (max-height:650px){
+  .home-page .home3-depth{
+    height:calc(100svh - 58px);min-height:calc(100svh - 58px);
+  }
+  .home-page .home3-depth > .container{margin-bottom:90px}
+  .home-page .home3-depth .hero-words-stack .hero-word{font-size:29px}
+  .home-page .home3-depth .hero-sub{
+    font-size:12px;line-height:1.35;margin:8px 0 12px;
+  }
+  .home-page .home3-depth .hero-ctas{gap:7px}
+  .home-page .home3-depth .hero-ctas .btn{min-height:42px;padding-block:10px}
+  .home-page .home3-depth .home3-equipment-solid{width:75vw}
+}
