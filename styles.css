@@ -2574,3 +2574,66 @@ h1,h2,h3,p,a,li{overflow-wrap:break-word}
   .home-page .home3-depth .hero-ctas .btn{min-height:42px;padding-block:10px}
   .home-page .home3-depth .home3-equipment-solid{width:75vw}
 }
+
+/* Botões de contato: verde WhatsApp e símbolo completo dentro do balão. */
+.btn-wa{
+  background:var(--wa);color:#06381f;
+  box-shadow:0 8px 24px rgba(12,124,60,.24);
+}
+.btn-wa:hover,.btn-wa:focus{
+  background:var(--wa-hover);color:#06381f;
+  box-shadow:0 14px 32px rgba(12,124,60,.3);
+}
+.btn-wa .wa-icon{display:none}
+.btn-wa::before{
+  content:"";display:block;flex:none;width:22px;height:22px;
+  background:url("whatsapp-symbol.svg") center/contain no-repeat;
+}
+
+/* Leitura da legenda da Home sobre a fotografia, em desktop e celular. */
+.home-3 .home3-depth .hero-sub{
+  color:#fff;font-weight:600;
+  padding:12px 16px;border-radius:12px;
+  background:rgba(3,20,36,.65);
+  box-shadow:0 8px 28px rgba(3,16,29,.16);
+  text-shadow:0 1px 3px rgba(0,0,0,.6);
+}
+
+/* O menu responsivo entra pela direita, com metade da largura da tela. */
+@media (max-width:1023px){
+  .site-header{--menu-top:64px}
+  .site-header.compact{--menu-top:58px}
+  body.menu-open .wa-float{display:none!important}
+  body.menu-open .site-header{
+    position:fixed;top:0;left:0;right:0;z-index:101;
+  }
+  .mobile-menu.open{
+    top:var(--menu-top);left:auto;right:0;bottom:0;
+    width:50vw;height:calc(100dvh - var(--menu-top));max-height:none;
+    padding:18px clamp(12px,2.5vw,24px) 22px;
+    overflow-y:auto;
+  }
+  .mobile-menu.open > a:not(.btn){
+    font-size:clamp(14px,4vw,18px);line-height:1.25;
+    padding:12px 2px;overflow-wrap:normal;
+  }
+  .mobile-menu-social{gap:clamp(5px,1.5vw,14px)}
+  .mobile-menu.open .mobile-menu-social a{
+    width:clamp(34px,4vw,42px);height:clamp(34px,4vw,42px);
+    min-height:clamp(34px,4vw,42px);
+  }
+}
+@media (max-width:767px){
+  .home-page .hero-scroll-cue,
+  .services-page .hero-scroll-cue{
+    color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.9);
+    background:rgba(3,18,31,.5);border-radius:10px;
+    padding:5px 8px;
+  }
+}
+@media (max-width:360px){
+  .empresa-page .company-hero-actions .btn-wa::before{width:17px;height:17px}
+  .home-3 .home3-depth .hero-sub{padding:8px 10px}
+  .home-page .hero-scroll-cue,
+  .services-page .hero-scroll-cue{left:calc(50% - 14px);padding-inline:4px}
+}
