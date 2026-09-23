@@ -136,19 +136,6 @@
     }, 3000);
   }
 
-  /* ---------- Serviços: iniciar o mapa móvel pela base em Arujá ---------- */
-  const areaMapViewport = document.querySelector('.services-area-map-viewport');
-  if (areaMapViewport) {
-    let areaMapPositioned = false;
-    const positionAreaMap = () => {
-      if (areaMapPositioned || window.innerWidth > 640) return;
-      areaMapViewport.scrollLeft = Math.max(0, areaMapViewport.scrollWidth * .38 - areaMapViewport.clientWidth / 2);
-      areaMapPositioned = true;
-    };
-    window.requestAnimationFrame(positionAreaMap);
-    window.addEventListener('resize', positionAreaMap, { passive: true });
-  }
-
   /* ---------- Floating WhatsApp: reveal after meaningful scroll ---------- */
   const waFloat = document.querySelector('.wa-float');
   if (waFloat) {
@@ -158,7 +145,7 @@
       waTicking = true;
       window.requestAnimationFrame(() => {
         const isPrimaryPageMobile = window.matchMedia('(max-width: 767px)').matches &&
-          (document.body.classList.contains('home-page') || document.body.classList.contains('empresa-page'));
+          (document.body.classList.contains('home-page') || document.body.classList.contains('empresa-page') || document.body.classList.contains('services-page'));
         waFloat.classList.toggle('is-visible', isPrimaryPageMobile || window.scrollY > 180);
         waTicking = false;
       });
