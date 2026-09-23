@@ -157,8 +157,9 @@
       if (waTicking) return;
       waTicking = true;
       window.requestAnimationFrame(() => {
-        const isHomeMobile = document.body.classList.contains('home-page') && window.matchMedia('(max-width: 767px)').matches;
-        waFloat.classList.toggle('is-visible', isHomeMobile || window.scrollY > 180);
+        const isPrimaryPageMobile = window.matchMedia('(max-width: 767px)').matches &&
+          (document.body.classList.contains('home-page') || document.body.classList.contains('empresa-page'));
+        waFloat.classList.toggle('is-visible', isPrimaryPageMobile || window.scrollY > 180);
         waTicking = false;
       });
     };

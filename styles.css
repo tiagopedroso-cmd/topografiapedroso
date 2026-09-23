@@ -2378,3 +2378,87 @@ h1,h2,h3,p,a,li{overflow-wrap:break-word}
   .process-step{padding-left:76px;min-height:94px}
   .process-step-number{width:54px;height:54px}
 }
+
+/* Empresa: composição compacta exclusiva para celulares */
+@media (max-width:767px){
+  .empresa-page{padding-bottom:0}
+  .empresa-page .mobile-cta-bar,
+  .empresa-page .btn-wa{display:none}
+  .empresa-page .wa-float{display:flex;right:18px;bottom:calc(18px + env(safe-area-inset-bottom))}
+
+  .empresa-page .company-hero .company-hero-grid{align-items:start}
+  .empresa-page .company-hero-copy{
+    width:min(100%,300px);margin:0;padding:clamp(52px,8svh,68px) 0 0;text-align:left;
+  }
+  .empresa-page .company-hero h1,
+  .empresa-page .company-hero .lead{margin-left:0;margin-right:0}
+  .empresa-page .company-hero h1{font-size:clamp(27px,8.2vw,34px)}
+  .empresa-page .company-hero .lead{max-width:260px;font-size:14px;line-height:1.5}
+  .empresa-page .company-hero-actions{justify-content:flex-start}
+  .empresa-page .company-hero-background .company-hero-man{
+    inset:auto -160px auto auto;top:clamp(210px,30svh,250px);
+    width:min(320vw,1250px);height:auto;max-width:none;object-fit:contain;
+  }
+  .empresa-page .company-hero-background::after{
+    background:linear-gradient(90deg,rgba(255,255,255,.88),rgba(255,255,255,.52) 58%,rgba(255,255,255,.06));
+  }
+
+  .empresa-page .company-content-section{
+    padding-block:clamp(24px,4svh,36px);scroll-margin-top:58px;
+  }
+  .empresa-page main > .company-content-section > .container{
+    display:flex;flex-direction:column;align-items:center;gap:12px;
+  }
+  .empresa-page .company-content-section .prose{
+    width:100%;max-width:640px;margin:0;text-align:center;
+  }
+  .empresa-page .company-content-section .prose > h2:first-child{
+    margin:0 0 12px;font-size:clamp(24px,6.6vw,31px);line-height:1.13;
+  }
+  .empresa-page .company-content-section .prose p{
+    margin:0 0 10px;font-size:14px;line-height:1.43;
+  }
+  .empresa-page .company-content-section .prose p:last-child{margin-bottom:0}
+  .empresa-page .company-content-section .quote-block{
+    margin:0;padding:0;background:transparent;border:0;
+  }
+
+  .empresa-page .company-introduction-media{
+    order:0;width:min(100%,400px);height:clamp(150px,23svh,210px);margin:0;
+  }
+  .empresa-page .company-introduction-copy{order:1}
+
+  .empresa-page .company-purpose .prose{max-width:640px}
+  .empresa-page .company-purpose .values-list{
+    display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;
+    margin:12px 0 0;padding:0;
+  }
+  .empresa-page .company-purpose .values-list li{
+    min-height:76px;margin:0;padding:10px 8px;
+    display:flex;flex-direction:column;justify-content:center;gap:5px;
+    text-align:center;font-size:12px;line-height:1.25;
+  }
+
+  .empresa-page .company-delivery-elements{display:none}
+  .empresa-page .company-delivery-media{
+    order:0;grid-column:auto;align-self:center;justify-content:center;
+    width:min(100%,400px);height:clamp(170px,26svh,230px);min-height:0;padding:0;
+  }
+  .empresa-page .company-delivery-media > img{
+    width:100%;height:100%;max-width:100%;min-height:0;aspect-ratio:auto;object-fit:contain;
+  }
+  .empresa-page .company-delivery-copy{order:1;max-width:640px}
+  .empresa-page .company-delivery-copy > div:last-child{display:none}
+}
+
+@media (max-width:360px) and (max-height:700px){
+  .empresa-page .company-content-section{padding-block:16px}
+  .empresa-page .company-content-section .prose > h2:first-child{
+    font-size:22px;line-height:1.1;margin-bottom:8px;
+  }
+  .empresa-page .company-content-section .prose p{
+    font-size:13px;line-height:1.38;margin-bottom:7px;
+  }
+  .empresa-page .company-introduction-media{height:110px}
+  .empresa-page .company-delivery-media{height:130px}
+}
