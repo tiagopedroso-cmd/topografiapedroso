@@ -167,6 +167,32 @@
     updateWaFloat();
   }
 
+  /* Home mobile: toque ou pressão longa no endereço abre a rota */
+  const addressRoute = document.querySelector('.home-page .address-mobile-route');
+  if (addressRoute) {
+    let routeHoldTimer = 0;
+    let routeStartX = 0;
+    let routeStartY = 0;
+    const cancelRouteHold = () => {
+      window.clearTimeout(routeHoldTimer);
+      routeHoldTimer = 0;
+    };
+    addressRoute.addEventListener('pointerdown', event => {
+      if (event.pointerType !== 'touch' || !window.matchMedia('(max-width: 767px)').matches) return;
+      routeStartX = event.clientX;
+      routeStartY = event.clientY;
+      routeHoldTimer = window.setTimeout(() => window.location.assign(addressRoute.href), 500);
+    });
+    addressRoute.addEventListener('pointermove', event => {
+      if (Math.abs(event.clientX - routeStartX) > 12 || Math.abs(event.clientY - routeStartY) > 12) cancelRouteHold();
+    });
+    addressRoute.addEventListener('pointerup', cancelRouteHold);
+    addressRoute.addEventListener('pointercancel', cancelRouteHold);
+    addressRoute.addEventListener('contextmenu', event => {
+      if (window.matchMedia('(max-width: 767px)').matches) event.preventDefault();
+    });
+  }
+
   /* ---------- Mobile menu ---------- */
   const toggle = document.getElementById('navToggle');
   const mobileMenu = document.getElementById('mobileMenu');
