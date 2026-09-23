@@ -2231,6 +2231,7 @@ h1,h2,h3,p,a,li{overflow-wrap:break-word}
   -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 3.5%,#000 96.5%,transparent 100%);
   mask-image:linear-gradient(90deg,transparent 0,#000 3.5%,#000 96.5%,transparent 100%);
 }
+.home-3 .services-swipe-hint{display:none}
 .home-3 .services-home .cards-grid.services-ledger.is-marquee-ready{
   display:flex;align-items:stretch;gap:14px;width:max-content;border:0;
   will-change:transform;
@@ -2262,11 +2263,34 @@ h1,h2,h3,p,a,li{overflow-wrap:break-word}
 }
 
 @media (max-width:767px){
+  .home-page{padding-bottom:0}
+  .home-page .mobile-cta-bar,
+  .home-page .btn-wa,
+  .home-page .hero-scroll-cue{display:none}
+  .home-page .wa-float{display:flex;right:18px;bottom:calc(18px + env(safe-area-inset-bottom))}
+  .home-3 .services-swipe-hint{
+    display:flex;align-items:center;justify-content:flex-end;gap:9px;
+    margin:0 0 6px;color:var(--brand);font:700 10px/1.2 var(--font-display);
+    letter-spacing:.13em;text-transform:uppercase;
+  }
+  .home-3 .services-swipe-chevrons{display:inline-flex;align-items:center;gap:2px;height:18px}
+  .home-3 .services-swipe-chevrons i{
+    display:block;width:8px;height:8px;border-right:1.5px solid currentColor;border-top:1.5px solid currentColor;
+    transform:rotate(45deg);animation:servicesSwipeChevron 1.55s ease-in-out infinite;
+  }
+  .home-3 .services-swipe-chevrons i:last-child{animation-delay:180ms}
   .home-3 .services-marquee-viewport{padding-bottom:12px;mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
   .home-3 .services-marquee-group .card,
   .home-3 .services-home .services-ledger.is-marquee-ready .card:last-child{
     flex-basis:min(82vw,310px);width:min(82vw,310px);min-height:218px;padding:18px;
   }
+}
+@keyframes servicesSwipeChevron{
+  0%,100%{opacity:.3;translate:-2px 0}
+  50%{opacity:1;translate:2px 0}
+}
+@media (prefers-reduced-motion:reduce){
+  .home-3 .services-swipe-chevrons i{animation:none;opacity:.85}
 }
 
 @media (hover:none),(pointer:coarse){

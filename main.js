@@ -157,11 +157,13 @@
       if (waTicking) return;
       waTicking = true;
       window.requestAnimationFrame(() => {
-        waFloat.classList.toggle('is-visible', window.scrollY > 180);
+        const isHomeMobile = document.body.classList.contains('home-page') && window.matchMedia('(max-width: 767px)').matches;
+        waFloat.classList.toggle('is-visible', isHomeMobile || window.scrollY > 180);
         waTicking = false;
       });
     };
     window.addEventListener('scroll', updateWaFloat, { passive: true });
+    window.addEventListener('resize', updateWaFloat, { passive: true });
     updateWaFloat();
   }
 
@@ -387,7 +389,8 @@
     const renderMarquee = now => {
       const elapsed = Math.min(40, now - previousTime);
       previousTime = now;
-      if (!dragging && !prefersReducedMotion && now > pauseUntil) position -= elapsed * 0.026;
+      const speed = window.matchMedia('(max-width: 767px)').matches ? 0.065 : 0.026;
+      if (!dragging && !prefersReducedMotion && now > pauseUntil) position -= elapsed * speed;
       wrapPosition();
       servicesLedger.style.transform = `translate3d(${position.toFixed(2)}px,0,0)`;
       requestAnimationFrame(renderMarquee);
