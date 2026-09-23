@@ -2575,21 +2575,6 @@ h1,h2,h3,p,a,li{overflow-wrap:break-word}
   .home-page .home3-depth .home3-equipment-solid{width:75vw}
 }
 
-/* Botões de contato: verde WhatsApp e símbolo completo dentro do balão. */
-.btn-wa{
-  background:var(--wa);color:#06381f;
-  box-shadow:0 8px 24px rgba(12,124,60,.24);
-}
-.btn-wa:hover,.btn-wa:focus{
-  background:var(--wa-hover);color:#06381f;
-  box-shadow:0 14px 32px rgba(12,124,60,.3);
-}
-.btn-wa .wa-icon{display:none}
-.btn-wa::before{
-  content:"";display:block;flex:none;width:22px;height:22px;
-  background:url("whatsapp-symbol.svg") center/contain no-repeat;
-}
-
 /* Leitura da legenda da Home sobre a fotografia, em desktop e celular. */
 .home-3 .home3-depth .hero-sub{
   color:#fff;font-weight:600;
@@ -2632,8 +2617,14 @@ h1,h2,h3,p,a,li{overflow-wrap:break-word}
   }
 }
 @media (max-width:360px){
-  .empresa-page .company-hero-actions .btn-wa::before{width:17px;height:17px}
   .home-3 .home3-depth .hero-sub{padding:8px 10px}
   .home-page .hero-scroll-cue,
   .services-page .hero-scroll-cue{left:calc(50% - 14px);padding-inline:4px}
+}
+
+/* Home: equipamento acima do véu escuro; indicador mais alto e CTA móvel oculta. */
+.home-3 .home3-depth .home3-equipment-solid{z-index:3}
+@media (max-width:767px){
+  .home-page .hero-ctas .btn-wa{display:none}
+  .home-page .hero-scroll-cue{bottom:clamp(52px,7svh,72px)}
 }
